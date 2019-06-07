@@ -1,5 +1,5 @@
 {
-  "name": "vuepress-boilerplate",
+  "name": "houkasaurus",
   "version": "1.0.0",
   "description": "Custom boilerplate for quickly creating CMS sites with Vuepress",
   "main": "index.js",
@@ -9,21 +9,25 @@
     "deploy:content": "bash deploy.sh"
   },
   "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.0",
     "vuepress": "^0.14.11"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Pterobyte/vuepress-boilerplate.git"
+    "url": "git+https://github.com/Pterobyte/houkasaurus.git"
   },
   "keywords": [
-    "boilerplate",
+    "blog",
     "vuepress",
     "cms"
   ],
   "author": "JT Houk <jt1992@gmail.com> (https://www.jt-houk.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Pterobyte/vuepress-boilerplate/issues"
+    "url": "https://github.com/Pterobyte/houkasaurus/issues"
   },
-  "homepage": "https://github.com/Pterobyte/vuepress-boilerplate#readme"
+  "homepage": "https://github.com/Pterobyte/houkasaurus#readme"
 }

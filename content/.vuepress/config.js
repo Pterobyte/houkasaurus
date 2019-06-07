@@ -1,18 +1,19 @@
 module.exports = {
-  title: 'VuePress Boilerplate',
-  description: 'Custom boilerplate for quickly creating CMS sites with Vuepress',
-  base: '/vuepress-boilerplate/', // sets baseDir
+  title: 'JT Houk',
+  description: 'Fullstack Philosopher',
+  base: '/', // sets baseDir
   themeConfig: {
       nav: [
         { text: 'Home', link: '/' },
-        { text: 'Guide', link: '/guide/' },
-        { text: 'VuePress Docs', link: 'https://vuepress.vuejs.org/guide/' },
+        { text: 'Projects', link: '/projects/' },
+        { text: 'Blog', link: '/blog/' },
       ],
       sidebar: {
-          '/guide/': [
+          '/projects/': [
               '',
-              'getting-started',
-              'deploying',
+          ],
+          '/blog/': [
+              '',
           ]
       }
   }
