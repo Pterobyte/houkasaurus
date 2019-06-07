@@ -1,7 +1,6 @@
 module.exports = {
   title: 'JT Houk',
   description: 'Fullstack Philosopher',
-  base: '/', // sets baseDir
   themeConfig: {
       nav: [
         { text: 'Home', link: '/' },
