@@ -1,6 +1,8 @@
 ---
 home: true
+doc_id: homepage
 heroImage: /korea-me-round-200.png
+heroText: JT Houk
 actionText: Projects →
 actionLink: /projects/
 features:

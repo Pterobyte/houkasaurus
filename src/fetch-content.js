@@ -11,5 +11,5 @@ const options = {
   tabsList: ['blog']
 }
 paperCMS(options)
-  .then((docs) => console.log(`Successfully wrote ${docs.length} docs!`))
+  .then(docs => console.log(`Successfully wrote ${docs.length} docs!`))
   .catch(console.error)

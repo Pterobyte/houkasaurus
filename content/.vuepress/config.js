@@ -10,11 +10,17 @@ module.exports = {
       sidebar: {
           '/projects/': [
               '',
-              'akkadu'
+              'akkadu',
+              'dropbox-paper-cms'
           ],
           '/blog/': [
               '',
           ]
       }
-  }
+  },
+  dest: './dist',
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+  ],
+  evergreen: true,
 }
