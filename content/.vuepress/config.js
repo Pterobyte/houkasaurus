@@ -1,6 +1,6 @@
 module.exports = {
   title: 'JT Houk',
-  description: 'Fullstack Philosopher',
+  description: ' ',
   themeConfig: {
       nav: [
         { text: 'Home', link: '/' },
@@ -10,6 +10,7 @@ module.exports = {
       sidebar: {
           '/projects/': [
               '',
+              'akkadu'
           ],
           '/blog/': [
               '',

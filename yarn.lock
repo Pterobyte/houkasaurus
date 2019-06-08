@@ -1756,6 +1756,11 @@ capture-stack-trace@^1.0.0:
   resolved "https://registry.yarnpkg.com/capture-stack-trace/-/capture-stack-trace-1.0.1.tgz#a6c0bbe1f38f3aa0b92238ecb6ff42c344d4135d"
   integrity sha512-mYQLZnx5Qt1JgB1WEiMCf2647plpGeQ2NMR/5L0HNZzGQo4fuSPnK+wjfPnKZV0aiJDgzmWqqkV/g7JD+DW0qw==
 
+case-it@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/case-it/-/case-it-1.0.1.tgz#bf161e9cb5c557302f854d130a42c04fe85a8f24"
+  integrity sha512-hxjXhD5fWVfBv2DglhN22wqtGTdImfpRyUB3FGofZL9LgHhyFwr+7Zbtqxj53W9DPzzDTfBuDB4XkeaGFGUijA==
+
 caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
@@ -2628,6 +2633,27 @@ dot-prop@^4.1.0:
   integrity sha512-tUMXrxlExSW6U2EXiiKGSBVdYgtV8qlHL+C10TsW4PURY/ic+eaysnSkwB4kA/mBlCyy/IKDJ+Lc3wbWeaXtuQ==
   dependencies:
     is-obj "^1.0.0"
+
+dotenv-defaults@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/dotenv-defaults/-/dotenv-defaults-1.0.2.tgz#441cf5f067653fca4bbdce9dd3b803f6f84c585d"
+  integrity sha512-iXFvHtXl/hZPiFj++1hBg4lbKwGM+t/GlvELDnRtOFdjXyWP7mubkVr+eZGWG62kdsbulXAef6v/j6kiWc/xGA==
+  dependencies:
+    dotenv "^6.2.0"
+
+dotenv@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-6.2.0.tgz#941c0410535d942c8becf28d3f357dbd9d476064"
+  integrity sha512-HygQCKUBSFl8wKQZBSemMywRWcEDNidvNbjGVyZu3nbZ8qq9ubiPoGLMdRDpfSrpkkm9BXYFkpKxxFX38o/76w==
+
+dropbox-paper-cms@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/dropbox-paper-cms/-/dropbox-paper-cms-1.0.2.tgz#b400f15b1926d1fdd60c185e36f5023fdd1b2cf7"
+  integrity sha512-xl2NlYe/JkQhzJ7k+r2uawrZd9AQEZXHkL+wbD4kj7Sbx8r8E+BAdkwgFP0WZfTOfU3wucQ/OugqMeU5en7Mkg==
+  dependencies:
+    case-it "^1.0.1"
+    node-fetch "^2.6.0"
+    promise-all-props "^1.0.1"
 
 duplexer3@^0.1.4:
   version "0.1.4"
@@ -5087,6 +5113,11 @@ no-case@^2.2.0:
   dependencies:
     lower-case "^1.1.1"
 
+node-fetch@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
+  integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
+
 node-libs-browser@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/node-libs-browser/-/node-libs-browser-2.2.0.tgz#c72f60d9d46de08a940dedbb25f3ffa2f9bbaa77"
@@ -5989,6 +6020,11 @@ progress@^2.0.0:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
+
+promise-all-props@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/promise-all-props/-/promise-all-props-1.0.1.tgz#c171e1e597c3246f570f3a13cecbd0f67e676e48"
+  integrity sha1-wXHh5ZfDJG9XDzoTzsvQ9n5nbkg=
 
 promise-inflight@^1.0.1:
   version "1.0.1"
