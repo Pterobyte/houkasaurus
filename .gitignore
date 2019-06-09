@@ -60,5 +60,7 @@ typings/
 # next.js build output
 .next
 
+dist/
+
 # OS files
 .DS_Store
