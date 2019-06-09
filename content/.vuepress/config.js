@@ -14,6 +14,10 @@ module.exports = {
       {
         "text": "Blog",
         "link": "/blog/"
+      },
+      {
+        "text": "About",
+        "link": "/about/"
       }
     ],
     "sidebar": {

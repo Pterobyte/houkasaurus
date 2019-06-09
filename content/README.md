@@ -10,7 +10,7 @@ features:
   details: Building scalable businesses from the ground up
 - title: Developer
   details: Programming and designing powerful web applications
-- title: Traveller
-  details: Spending all my money on going someplace new
+- title: Decent Cook
+  details: If you need a decent curry recipe, I'm your man
 footer: https://github.com/Pterobyte
 ---
