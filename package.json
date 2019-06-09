@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev:content": "vuepress dev content",
-    "build:content": "vuepress build content",
+    "build:content": "vuepress build content/",
     "fetch:content": "node src/fetch-content.js",
     "deploy:content": "bash deploy.sh",
     "lint:staged": "eslint --quiet --fix",

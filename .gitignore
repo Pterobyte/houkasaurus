@@ -64,3 +64,4 @@ dist/
 
 # OS files
 .DS_Store
+content/.vuepress/dist

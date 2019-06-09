@@ -18,7 +18,6 @@ module.exports = {
           ]
       }
   },
-  dest: './dist',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
   ],
