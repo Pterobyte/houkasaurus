@@ -11,6 +11,11 @@
     "lint:staged": "eslint --quiet --fix",
     "test": "echo 'No tests specified'"
   },
+  "dependencies": {
+    "dotenv-defaults": "^1.0.2",
+    "dropbox-paper-cms": "^1.0.8",
+    "vuetify": "^1.5.14"
+  },
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
@@ -34,10 +39,5 @@
   "bugs": {
     "url": "https://github.com/Pterobyte/houkasaurus/issues"
   },
-  "homepage": "https://github.com/Pterobyte/houkasaurus#readme",
-  "dependencies": {
-    "dotenv-defaults": "^1.0.2",
-    "dropbox-paper-cms": "^1.0.7",
-    "vuetify": "^1.5.14"
-  }
+  "homepage": "https://github.com/Pterobyte/houkasaurus#readme"
 }
