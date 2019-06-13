@@ -1,8 +1,8 @@
 ---
 home: true
 doc_id: homepage
-heroImage: /korea-me-round-200.png
-heroText: JT Houk
+heroImage: /logo.png
+heroText: Web Developer
 actionText: Projects →
 actionLink: /projects/
 features:
@@ -11,6 +11,6 @@ features:
 - title: Developer
   details: Programming and designing powerful web applications
 - title: Decent Cook
-  details: If you need a decent curry recipe, I'm your man
+  details: Whipping up some pretty good curries
 footer: https://github.com/Pterobyte
 ---

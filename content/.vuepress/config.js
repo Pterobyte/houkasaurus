@@ -1,5 +1,5 @@
 module.exports = {
-  "title": "JT Houk",
+  "title": "JT",
   "description": " ",
   "themeConfig": {
     "nav": [
@@ -39,7 +39,7 @@ module.exports = {
       "link",
       {
         "rel": "icon",
-        "href": "/favicon.ico"
+        "href": "/favicon.png"
       }
     ]
   ],

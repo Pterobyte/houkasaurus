@@ -6,10 +6,11 @@ dotenv.config()
 
 const options = {
   dropboxApiToken: process.env.DROPBOX_API_TOKEN,
-  config: vueConfig,
   contentDir: 'content',
   tabsList: ['blog']
 }
-paperCMS(options)
-  .then(docs => console.log(`Successfully wrote ${docs.length} docs!`))
+paperCMS
+  .fetchPaperDocs(options)
+  .then(docs => paperCMS.generateContent(docs, contentDir))
+  .then(docs => paperCMS.generateConfig(docs, vueConfig))
   .catch(console.error)
