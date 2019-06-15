@@ -2703,12 +2703,13 @@ dotenv@^6.2.0:
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-6.2.0.tgz#941c0410535d942c8becf28d3f357dbd9d476064"
   integrity sha512-HygQCKUBSFl8wKQZBSemMywRWcEDNidvNbjGVyZu3nbZ8qq9ubiPoGLMdRDpfSrpkkm9BXYFkpKxxFX38o/76w==
 
-dropbox-paper-cms@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/dropbox-paper-cms/-/dropbox-paper-cms-1.0.7.tgz#a09c46ad758279d498897cb4caa37c9179fce636"
-  integrity sha512-FukgaqVkEjR/x7b7VlVIdUm+b0ur3LAbD6eOK5J3PhnW5CXmZy245O1sIXTFmCeV820B7PR1xYNPpGwLIzJ+Aw==
+dropbox-paper-cms@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/dropbox-paper-cms/-/dropbox-paper-cms-1.0.11.tgz#8e5892ac4b08295b9706641e5946047ca564a822"
+  integrity sha512-ml8t33AbVF2SVlkN6rwAD70fVoYddnzhmLz7CQH5hyaVC0HA2tuqI2Lbo1wpAzq60dt9Scd06ImxD9ezhvE+6g==
   dependencies:
     case-it "^1.0.1"
+    dotenv-defaults "^1.0.2"
     node-fetch "^2.6.0"
     promise-all-props "^1.0.1"
 

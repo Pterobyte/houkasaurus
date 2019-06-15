@@ -4,13 +4,15 @@ const vueConfig = require('../content/.vuepress/config')
 
 dotenv.config()
 
+const contentDir = '../content'
 const options = {
   dropboxApiToken: process.env.DROPBOX_API_TOKEN,
-  contentDir: 'content',
-  tabsList: ['blog']
+  contentDir,
+  folders: ['blog']
 }
+
 paperCMS
   .fetchPaperDocs(options)
   .then(docs => paperCMS.generateContent(docs, contentDir))
-  .then(docs => paperCMS.generateConfig(docs, vueConfig))
+  .then(docs => paperCMS.generateConfig(docs, contentDir, vueConfig))
   .catch(console.error)
