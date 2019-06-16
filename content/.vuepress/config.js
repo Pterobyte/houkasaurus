@@ -39,7 +39,7 @@ module.exports = {
       "link",
       {
         "rel": "icon",
-        "href": "/favicon.png"
+        "href": "/favicon.ico"
       }
     ]
   ],

@@ -2,7 +2,7 @@
 home: true
 doc_id: homepage
 heroImage: /logo.png
-heroText: Web Developer
+heroText: Houkasaurus
 actionText: Projects →
 actionLink: /projects/
 features:
