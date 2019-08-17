@@ -23,6 +23,7 @@
     "node-sass": "^4.12.0",
     "prettier": "^1.18.0",
     "sass-loader": "^7.1.0",
+    "stylelint": "^10.1.0",
     "vuepress": "^0.14.11"
   },
   "repository": {
