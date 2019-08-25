@@ -1,6 +1,8 @@
 module.exports = {
   "title": "JT",
   "description": " ",
+  "serviceWorker": true,
+  "ga": "UA-146443449-1",
   "themeConfig": {
     "nav": [
       {
@@ -21,11 +23,6 @@ module.exports = {
       }
     ],
     "sidebar": {
-      "/projects/": [
-        "",
-        "akkadu",
-        "dropbox-paper-cms"
-      ],
       "/blog/": [
         "",
         "how-to-create-an-api-reference-for-your-node-app-with-swagger",

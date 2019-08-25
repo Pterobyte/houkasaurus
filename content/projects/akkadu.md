@@ -1,3 +1,7 @@
+---
+url: app.akkadu.com
+---
+
 # Akkadu
 
 [![akkadu](/akkadu.png)](https://akkadu.cn)

@@ -164,7 +164,7 @@ export default {
       display none
       // Avoid height shaked by clicking
       height auto !important
-      box-sizing border-box;
+      box-sizing border-box
       max-height calc(100vh - 2.7rem)
       overflow-y auto
       position absolute

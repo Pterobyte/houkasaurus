@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="stylus">
-.dropdown-enter, .dropdown-leave-to
+.dropdown-enter .dropdown-leave-to
   height 0 !important
 
 </style>

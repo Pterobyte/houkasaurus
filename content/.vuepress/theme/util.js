@@ -214,3 +214,15 @@ function resolveItem (item, pages, base, isNested) {
     }
   }
 }
+
+export const handleFetchErrors = res =>
+  res
+    .clone()
+    .json()
+    .then(err => err.message)
+    .catch(() => res.text())
+    .then(message => {
+      throw new Error(message)
+    })
+
+export const handleBlobResponse = res => res.ok ? res.blob() : handleFetchErrors(res)

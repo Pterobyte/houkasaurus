@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <!-- TODO: more attractive hero, video? -->
     <div class="hero">
       <img
         v-if="data.heroImage"
@@ -23,7 +24,7 @@
         />
       </p>
     </div>
-
+<!-- TODO: slider -->
     <div
       class="features"
       v-if="data.features && data.features.length"
@@ -44,7 +45,7 @@
       class="footer"
       v-if="data.footer"
     >
-      {{ data.footer }}
+      <a :href="data.footer" target="_blank" rel="noopener">{{data.footer}}</a>
     </div>
   </div>
 </template>

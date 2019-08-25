@@ -38,6 +38,8 @@
 
     <Home v-else-if="$page.frontmatter.home"/>
 
+    <Projects v-else-if="this.$page.path === '/projects/'" />
+
     <Page
       v-else
       :sidebar-items="sidebarItems"
@@ -60,6 +62,7 @@
 import Vue from 'vue'
 import nprogress from 'nprogress'
 import Home from './pages/Home.vue'
+import Projects from './pages/Projects.vue'
 import Navbar from './components/Navbar.vue'
 import Page from './pages/Page.vue'
 import Sidebar from './components/Sidebar.vue'
@@ -67,7 +70,7 @@ import SWUpdatePopup from './components/SWUpdatePopup.vue'
 import { resolveSidebarItems } from './util'
 
 export default {
-  components: { Home, Page, Sidebar, Navbar, SWUpdatePopup },
+  components: { Home, Page, Projects, Sidebar, Navbar, SWUpdatePopup },
 
   data () {
     return {
