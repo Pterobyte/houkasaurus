@@ -38,7 +38,7 @@ export default {
         .then(URL.createObjectURL)
     }
   },
-  created() {
+  mounted() {
     if (this.$props.url) {
       this.fetchBackgroundImage(this.$props.url)
         .then((backgroundImageUrl) => {
