@@ -5,6 +5,7 @@
       <ProjectCard
         :name="project.title"
         :url="project.frontmatter.url"
+        :excerpt="project.excerpt"
       />
     </div>
   </main>
@@ -12,10 +13,11 @@
 
 <script>
 import ProjectCard from '../components/ProjectCard.vue'
+import Metadata from '../components/Metadata.vue'
 
 export default {
   name: 'Projects',
-  components: { ProjectCard },
+  components: { ProjectCard , Metadata},
   computed: {
     projects() {
       return this.$site.pages

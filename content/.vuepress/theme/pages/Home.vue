@@ -52,9 +52,10 @@
 
 <script>
 import NavLink from '../components/NavLink.vue'
+import Metadata from '../components/Metadata.vue'
 
 export default {
-  components: { NavLink },
+  components: { NavLink, Metadata },
 
   computed: {
     data () {

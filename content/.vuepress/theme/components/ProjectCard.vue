@@ -1,5 +1,5 @@
 <template>
-  <a :href="href" target="_blank">
+  <a :href="imageLink" target="_blank">
     <section>
       <header>{{name}}</header>
       <div class="card" :style="backgroundImageStyle"></div>
@@ -13,21 +13,24 @@ export default {
     name: {
       required: true
     },
-    url: {
-      required: false
+    excerpt: {
+      required: true
     }
   },
   data() {
     return {
-      backgroundImageUrl: ''
+      imageBlob: ''
     }
   },
   computed: {
     backgroundImageStyle() {
-      return `--image-url: url(${this.backgroundImageUrl});`
+      return `--image-url: url(${this.imageBlob});`
     },
-    href() {
-      return `https://${this.url}`
+    imageLink() {
+      const excerpt = document.createElement('div')
+      excerpt.innerHTML = this.$props.excerpt
+      const anchor = excerpt.querySelector('[target="_blank"]')
+      return anchor.href
     }
   },
   methods: {
@@ -36,13 +39,13 @@ export default {
       return fetch(url)
         .then(handleBlobResponse)
         .then(URL.createObjectURL)
-    }
+    },
   },
   mounted() {
-    if (this.$props.url) {
-      this.fetchBackgroundImage(this.$props.url)
-        .then((backgroundImageUrl) => {
-          this.backgroundImageUrl = backgroundImageUrl
+    if (this.imageLink) {
+      this.fetchBackgroundImage(this.imageLink)
+        .then((imageBlob) => {
+          this.imageBlob = imageBlob
         })
         .catch(console.error)
     }
@@ -52,15 +55,15 @@ export default {
 <style lang="stylus" scoped>
 @import '../styles/config.styl'
 .card
-  border 1px solid darken($borderColor, 10%)
-  border-radius 4px
-  height 12rem
-  text-align center
   --image-url ''
   background-image var(--image-url)
   background-size cover
   filter blur(2px) opacity(50%)
   transition all 0.2s ease-in-out
+  border 1px solid darken($borderColor, 10%)
+  border-radius 4px
+  height 12rem
+  text-align center
 
   &:hover
     filter blur(0) opacity(100%)

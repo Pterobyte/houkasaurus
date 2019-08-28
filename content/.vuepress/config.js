@@ -3,6 +3,7 @@ module.exports = {
   "description": " ",
   "serviceWorker": true,
   "ga": "UA-146443449-1",
+  "markdown": {},
   "themeConfig": {
     "nav": [
       {
@@ -25,9 +26,12 @@ module.exports = {
     "sidebar": {
       "/blog/": [
         "",
+        "cook-like-a-programmer",
         "how-to-create-an-api-reference-for-your-node-app-with-swagger",
+        "how-to-make-a-cli-tool-in-node",
         "how-to-publish-a-half-decent-npm-module",
-        "how-to-use-dropbox-paper-as-a-headless-cms"
+        "how-to-use-dropbox-paper-as-a-headless-cms",
+        "several-ways-to-display-download-progress"
       ]
     }
   },

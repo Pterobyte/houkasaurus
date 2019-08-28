@@ -12,8 +12,11 @@
     "test": "echo 'No tests specified'"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
     "dotenv-defaults": "^1.0.2",
-    "dropbox-paper-cms": "^1.0.11",
+    "dropbox-paper-cms": "^1.0.15",
+    "markdown-it-for-inline": "^0.1.1",
+    "markdown-it-front-matter": "^0.1.2",
     "vuetify": "^1.5.14"
   },
   "devDependencies": {
