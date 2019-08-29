@@ -32,6 +32,13 @@ module.exports = {
         "how-to-publish-a-half-decent-npm-module",
         "how-to-use-dropbox-paper-as-a-headless-cms",
         "several-ways-to-display-download-progress"
+      ],
+      "/projects/": [
+        "",
+        "akkadu",
+        "dropbox-paper-cms",
+        "site-shot",
+        "vue-beijing"
       ]
     }
   },
