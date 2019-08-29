@@ -19,18 +19,13 @@ export default {
   },
   data() {
     return {
-      imageBlob: ''
+      imageBlob: '',
+      imageLink: ''
     }
   },
   computed: {
     backgroundImageStyle() {
       return `--image-url: url(${this.imageBlob});`
-    },
-    imageLink() {
-      const excerpt = document.createElement('div')
-      excerpt.innerHTML = this.$props.excerpt
-      const anchor = excerpt.querySelector('[target="_blank"]')
-      return anchor.href
     }
   },
   methods: {
@@ -42,6 +37,10 @@ export default {
     },
   },
   mounted() {
+    const excerpt = document.createElement('div')
+    excerpt.innerHTML = this.$props.excerpt
+    const anchor = excerpt.querySelector('[target="_blank"]')
+    this.imageLink = anchor.href
     if (this.imageLink) {
       this.fetchBackgroundImage(this.imageLink)
         .then((imageBlob) => {
