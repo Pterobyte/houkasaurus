@@ -24,9 +24,6 @@ export default {
         .filter(page => page.path.includes(this.$page.path))
         .filter(page => page.title)
     }
-  },
-  mounted() {
-    // console.log
   }
 }
 </script>

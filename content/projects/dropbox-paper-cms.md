@@ -7,12 +7,12 @@
   "status": {
     ".tag": "active"
   },
-  "revision": 31,
-  "last_updated_date": "2019-08-29T02:26:57Z",
+  "revision": 55,
+  "last_updated_date": "2019-08-29T02:56:17Z",
   "last_editor": "jt.houk@outlook.com"
 }
 ---
 # Dropbox Paper CMS
-[npm.com](https://www.npmjs.com/package/dropbox-paper-cms)
-<-- more -->
+[pterobyte.github.io](https://pterobyte.github.io/dropbox-paper-cms/)
+<!-- more -->
 

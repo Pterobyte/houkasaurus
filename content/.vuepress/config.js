@@ -37,6 +37,7 @@ module.exports = {
         "",
         "akkadu",
         "dropbox-paper-cms",
+        "furun-adventures",
         "site-shot",
         "vue-beijing"
       ]

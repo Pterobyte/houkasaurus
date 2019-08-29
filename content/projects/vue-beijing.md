@@ -7,12 +7,12 @@
   "status": {
     ".tag": "active"
   },
-  "revision": 13,
-  "last_updated_date": "2019-08-29T02:13:58Z",
+  "revision": 14,
+  "last_updated_date": "2019-08-29T02:52:39Z",
   "last_editor": "jt.houk@outlook.com"
 }
 ---
 # Vue Beijing
 [vuebeijing.io](https://vuebeijing.io)
-<-- more -->
+<!-- more -->
 
