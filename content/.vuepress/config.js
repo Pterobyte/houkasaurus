@@ -4,7 +4,7 @@ module.exports = {
   "serviceWorker": true,
   "ga": "UA-146443449-1",
   "themeConfig": {
-    repo: 'pterobyte',
+    "repo": "pterobyte",
     "nav": [
       {
         "text": "Home",
@@ -25,17 +25,24 @@ module.exports = {
     ],
     "sidebar": {
       "/blog/": [
-        "how-to-use-dropbox-paper-as-a-headless-cms",
+        "",
+        "bash-functions-to-make-development-more-fun",
         "cook-like-a-programmer",
+        "customizing-your-mail-signatures",
         "how-to-create-an-api-reference-for-your-node-app-with-swagger",
         "how-to-make-a-cli-tool-in-node",
         "how-to-publish-a-half-decent-npm-module",
+        "how-to-use-dropbox-paper-as-a-headless-cms",
+        "making-an-http-proxy-using-cloudflare-workers",
         "several-ways-to-display-download-progress"
       ],
       "/projects/": [
+        "",
         "akkadu",
+        "doomsday-clock",
         "dropbox-paper-cms",
         "furun-adventures",
+        "proxy-worker",
         "site-shot",
         "vue-beijing"
       ]
