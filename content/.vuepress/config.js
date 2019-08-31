@@ -3,8 +3,8 @@ module.exports = {
   "description": " ",
   "serviceWorker": true,
   "ga": "UA-146443449-1",
-  "markdown": {},
   "themeConfig": {
+    repo: 'pterobyte',
     "nav": [
       {
         "text": "Home",
@@ -16,7 +16,7 @@ module.exports = {
       },
       {
         "text": "Blog",
-        "link": "/blog/"
+        "link": "/blog/how-to-use-dropbox-paper-as-a-headless-cms"
       },
       {
         "text": "Contact",
@@ -25,16 +25,14 @@ module.exports = {
     ],
     "sidebar": {
       "/blog/": [
-        "",
+        "how-to-use-dropbox-paper-as-a-headless-cms",
         "cook-like-a-programmer",
         "how-to-create-an-api-reference-for-your-node-app-with-swagger",
         "how-to-make-a-cli-tool-in-node",
         "how-to-publish-a-half-decent-npm-module",
-        "how-to-use-dropbox-paper-as-a-headless-cms",
         "several-ways-to-display-download-progress"
       ],
       "/projects/": [
-        "",
         "akkadu",
         "dropbox-paper-cms",
         "furun-adventures",
