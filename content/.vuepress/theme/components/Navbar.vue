@@ -14,7 +14,7 @@
       >
       <span
         ref="siteName"
-        class="site-name"
+        class="site-name bounce-letters"
         v-if="$siteTitle"
         :class="{ 'can-hide': $site.themeConfig.logo }"
       >{{ $siteTitle }}</span>
@@ -87,6 +87,7 @@ function css (el, property) {
 
 <style lang="stylus">
 @import '../styles/config.styl'
+@import '../styles/utils/bounce-letters.styl'
 
 $navbar-vertical-padding = 0.7rem
 $navbar-horizontal-padding = 1.5rem
@@ -103,10 +104,11 @@ $navbar-horizontal-padding = 1.5rem
     margin-right 0.8rem
     vertical-align top
   .site-name
-    font-size 1.3rem
-    font-weight 600
+    font-size 1.5rem
+    font-weight 700
     color var(--text-color)
     position relative
+
   .links
     padding-left 1.5rem
     box-sizing border-box
