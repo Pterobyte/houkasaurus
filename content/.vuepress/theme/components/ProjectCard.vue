@@ -83,11 +83,13 @@ export default {
   background-size cover
   filter blur(2px) opacity(50%)
   transition all 0.2s ease-in-out
-  border 1px solid darken($borderColor, 10%)
+  border 1px solid var(--border-color)
   border-radius 4px
   height 12rem
   text-align center
 
   &:hover
     filter blur(0) opacity(100%)
+a
+  color var(--text-color)
 </style>

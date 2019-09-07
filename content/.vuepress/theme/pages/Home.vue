@@ -94,11 +94,11 @@ export default {
       max-width 35rem
       font-size 1.6rem
       line-height 1.3
-      color lighten($textColor, 40%)
+      color var(--text-color)
     .action-button
       display inline-block
       font-size 1.2rem
-      color #fff
+      color var(--bg-color)
       background-color $accentColor
       padding 0.8rem 1.6rem
       border-radius 4px
@@ -108,7 +108,7 @@ export default {
       &:hover
         background-color lighten($accentColor, 10%)
   .features
-    border-top 1px solid $borderColor
+    border-top 1px solid var(--border-color)
     padding 1.2rem 0
     margin-top 2.5rem
     display flex
@@ -125,14 +125,14 @@ export default {
       font-weight 500
       border-bottom none
       padding-bottom 0
-      color lighten($textColor, 10%)
+      color var(--text-color)
     p
-      color lighten($textColor, 25%)
+      color var(--text-color)
   .footer
     padding 2.5rem
-    border-top 1px solid $borderColor
+    border-top 1px solid var(--border-color)
     text-align center
-    color lighten($textColor, 25%)
+    color var(--text-color)
 
 @media (max-width: $MQMobile)
   .home

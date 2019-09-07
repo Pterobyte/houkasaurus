@@ -161,26 +161,26 @@ export default {
   input
     cursor text
     width 10rem
-    color lighten($textColor, 25%)
+    color var(--text-color)
     display inline-block
-    border 1px solid darken($borderColor, 10%)
+    border 1px solid var(--border-color)
     border-radius 2rem
     font-size 0.9rem
     line-height 2rem
     padding 0 0.5rem 0 2rem
     outline none
     transition all .2s ease
-    background #fff url(./search.svg) 0.6rem 0.5rem no-repeat
+    background var(--bg-color) url(./search.svg) 0.6rem 0.5rem no-repeat
     background-size 1rem
     &:focus
       cursor auto
       border-color $accentColor
   .suggestions
-    background #fff
+    background var(--bg-color)
     width 20rem
     position absolute
     top 1.5rem
-    border 1px solid darken($borderColor, 10%)
+    border 1px solid var(--border-color)
     border-radius 6px
     padding 0.4rem
     list-style-type none
@@ -193,7 +193,7 @@ export default {
     cursor pointer
     a
       white-space normal
-      color lighten($textColor, 35%)
+      color var(--text-color)
       .page-title
         font-weight 600
       .header

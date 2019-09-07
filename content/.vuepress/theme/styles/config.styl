@@ -1,8 +1,3 @@
-// colors
-// $accentColor = #3eaf7c
-// $textColor = #2c3e50
-// $borderColor = #eaecef
-// $codeBgColor = #282c34
 $arrowBgColor = #ccc
 
 // layout
@@ -20,10 +15,24 @@ $lineNumbersWrapperWidth = 3.5rem
 $codeLang = js ts html md vue css sass scss less stylus go java c sh yaml py
 
 // Houk Theme Colors
-$accentColor = hsl(0, 70%, 45%)
+$accentColor = hsl(0, 60%, 45%)
 $textColor = hsl(206, 9%, 15%)
 $darkTextColor = hsl(206, 9%, 15%)
-$darkTextHLColor = hsl(206, 9%, 35%)
-$borderColor = #eaecef
+$darkTextHLColor = hsl(0, 39%, 65%)
+var(--border-color) = #eaecef
 $codeBgColor = #282c34
-$bgColor = hsl(206, 9%, 15%)
+$bgColor = #fff
+
+:root
+  --bg-color: $bgColor
+  --border-color: var(--border-color)
+  --text-color: $textColor
+  --darken-text-color: $darkTextColor
+
+// Dark theme colors
+@media (prefers-color-scheme: dark)
+  :root
+    --bg-color: hsl(206, 9%, 15%)
+    --border-color: #888888
+    --text-color: #fff
+    --darken-text-color: #eaecef

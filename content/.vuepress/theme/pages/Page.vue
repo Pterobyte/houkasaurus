@@ -210,14 +210,14 @@ function find (page, items, offset) {
   .edit-link
     display inline-block
     a
-      color lighten($textColor, 25%)
+      color var(--text-color)
       margin-right 0.25rem
   .last-updated
     float right
     font-size 0.9em
     .prefix
       font-weight 500
-      color lighten($textColor, 25%)
+      color var(--text-color)
     .time
       font-weight 400
       color #aaa
@@ -229,7 +229,7 @@ function find (page, items, offset) {
   .inner
     min-height 2rem
     margin-top 0
-    border-top 1px solid $borderColor
+    border-top 1px solid var(--border-color)
     padding-top 1rem
     overflow auto // clear float
   .next
