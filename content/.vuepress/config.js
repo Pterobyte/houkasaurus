@@ -29,6 +29,7 @@ module.exports = {
         "bash-functions-to-make-development-more-fun",
         "cook-like-a-programmer",
         "customizing-your-mail-signatures",
+        "express-app-design-principles-in-serverless-world",
         "how-to-create-an-api-reference-for-your-node-app-with-swagger",
         "how-to-make-a-cli-tool-in-node",
         "how-to-publish-a-half-decent-npm-module",

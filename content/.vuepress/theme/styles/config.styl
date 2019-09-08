@@ -19,15 +19,26 @@ $accentColor = hsl(0, 60%, 45%)
 $textColor = hsl(206, 9%, 15%)
 $darkTextColor = hsl(206, 9%, 15%)
 $darkTextHLColor = hsl(0, 39%, 65%)
-var(--border-color) = #eaecef
+$borderColor = #eaecef
+$btnBgColor = linear-gradient(
+  45deg,
+  $accentColor 0%,
+  $accentColor 12%,
+  lighten($accentColor, 40%) 67%,
+  lighten($accentColor, 20%) 99%,
+  $accentColor 100%
+)
 $codeBgColor = #282c34
 $bgColor = #fff
+$shadowColor = #888888
 
 :root
   --bg-color: $bgColor
-  --border-color: var(--border-color)
+  --border-color: $borderColor
   --text-color: $textColor
   --darken-text-color: $darkTextColor
+  --shadow-color: $shadowColor
+  --button-text-color: #fff
 
 // Dark theme colors
 @media (prefers-color-scheme: dark)
@@ -36,3 +47,4 @@ $bgColor = #fff
     --border-color: #888888
     --text-color: #fff
     --darken-text-color: #eaecef
+    --shadow-color: black

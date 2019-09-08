@@ -7,12 +7,14 @@
   "status": {
     ".tag": "active"
   },
-  "revision": 31,
-  "last_updated_date": "2019-08-31T09:20:03Z",
+  "revision": 40,
+  "last_updated_date": "2019-09-08T07:04:41Z",
   "last_editor": "jt.houk@outlook.com"
 }
 ---
 # Doomsday Clock
 [pterobyte.github.io](https://pterobyte.github.io/doomsday-clock/)
 <!-- more -->
+
+update content
 

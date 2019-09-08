@@ -6,6 +6,7 @@
         v-if="data.heroImage"
         :src="$withBase(data.heroImage)"
         alt="hero"
+        class="spin"
       >
 
       <h1>{{ data.heroText }}</h1>
@@ -19,7 +20,7 @@
         v-if="data.actionText && data.actionLink"
       >
         <NavLink
-          class="action-button"
+          class="action-button action-button-shine"
           :item="actionLink"
         />
       </p>
@@ -87,6 +88,10 @@ export default {
       max-height 280px
       display block
       margin 3rem auto 3.5rem
+    .spin
+      transition all 0.2s ease-in-out
+      &:hover
+        transform: rotate(360deg)
     h1
       font-size 3rem
     h1, .description, .action
@@ -100,14 +105,18 @@ export default {
       display inline-block
       font-size 1.2rem
       color var(--bg-color)
-      background-color $accentColor
+      background $btnBgColor
       padding 0.8rem 1.6rem
       border-radius 4px
-      transition background-color .1s ease
       box-sizing border-box
       border-bottom 1px solid darken($accentColor, 10%)
+      background-size: 200% 200%
+      background-position: 10% 0%
+      transition: all .1s ease-in-out
       &:hover
-        background-color lighten($accentColor, 10%)
+        box-shadow -1px 1px 2px var(--shadow-color)
+        background-position: 91% 100%
+        color var(--button-text-color)
   .features
     border-top 1px solid var(--border-color)
     padding 1.2rem 0
