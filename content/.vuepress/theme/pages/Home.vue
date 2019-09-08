@@ -8,7 +8,7 @@
         alt="hero"
       >
 
-      <h1>{{ data.heroText || $title || 'Hello' }}</h1>
+      <h1>{{ data.heroText }}</h1>
 
       <p class="description">
         {{ data.tagline || $description || 'Welcome to your VuePress site' }}
@@ -81,11 +81,12 @@ export default {
   margin 0px auto
   .hero
     text-align center
+    padding 2rem 0
     img
       max-width 100%
       max-height 280px
       display block
-      margin 3rem auto 1.5rem
+      margin 3rem auto 3.5rem
     h1
       font-size 3rem
     h1, .description, .action

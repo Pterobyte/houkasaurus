@@ -2,7 +2,7 @@
 home: true
 doc_id: homepage
 heroImage: /logo.png
-heroText: Houkasaurus
+# heroText: Houkasaurus
 actionText: Projects →
 actionLink: /projects/
 features:
@@ -12,5 +12,5 @@ features:
   details: Programming and designing powerful web applications
 - title: Decent Cook
   details: Whipping up some pretty good curries
-footer: https://github.com/Pterobyte
+# footer: https://github.com/Pterobyte
 ---
