@@ -16,7 +16,7 @@ module.exports = {
       },
       {
         "text": "Blog",
-        "link": "/blog/how-to-use-dropbox-paper-as-a-headless-cms"
+        "link": "/blog/"
       },
       {
         "text": "Contact",
@@ -25,7 +25,6 @@ module.exports = {
     ],
     "sidebar": {
       "/blog/": [
-        "",
         "bash-functions-to-make-development-more-fun",
         "cook-like-a-programmer",
         "customizing-your-mail-signatures",
