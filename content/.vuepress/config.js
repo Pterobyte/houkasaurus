@@ -29,16 +29,8 @@ module.exports = {
     ],
     "sidebar": {
       "/blog/": [
-        "bash-functions-to-make-development-more-fun",
-        "cook-like-a-programmer",
-        "customizing-your-mail-signatures",
-        "express-app-design-principles-in-serverless-world",
-        "how-to-create-an-api-reference-for-your-node-app-with-swagger",
-        "how-to-make-a-cli-tool-in-node",
-        "how-to-publish-a-half-decent-npm-module",
-        "how-to-use-dropbox-paper-as-a-headless-cms",
-        "making-an-http-proxy-using-cloudflare-workers",
-        "several-ways-to-display-download-progress"
+        "",
+        "how-to-bypass-censorship-with-shadowsocks"
       ],
       "/projects/": [
         "",
