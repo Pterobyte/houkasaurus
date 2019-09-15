@@ -5,10 +5,18 @@
   <a href="https://github.com/Pterobyte/houkasaurus/graphs/commit-activity">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" />
   </a>
-  [![David Dependencies Status](https://david-dm.org/pterobyte/houkasaurus.svg)](https://david-dm.org/pterobyte/houkasaurus)
-  [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Pterobyte/jt.houk.space.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Pterobyte/jt.houk.space/context:javascript)
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/db1500c5-d307-4fa7-acd0-60543ece4624/deploy-status)](https://app.netlify.com/sites/houkasaurus/deploys)
+  <a href="https://david-dm.org/pterobyte/houkasaurus">
+    <img alt="David Dependencies Status" src="https://david-dm.org/pterobyte/houkasaurus.svg" target="_blank" />
+  </a>
+  <a href="https://lgtm.com/projects/g/Pterobyte/jt.houk.space/context:javascript">
+    <img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/Pterobyte/jt.houk.space.svg?logo=lgtm&logoWidth=18" target="_blank" />
+  </a>
+  <a href="https://opensource.org/licenses/MIT">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
+  </a>
+  <a href="https://app.netlify.com/sites/houkasaurus/deploys">
+    <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/db1500c5-d307-4fa7-acd0-60543ece4624/deploy-status" target="_blank" />
+  </a>
   <a href="https://github.com/Pterobyte/jt.houk.space/blob/master/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
   </a>
