@@ -19,6 +19,10 @@ module.exports = {
         "link": "/blog/"
       },
       {
+        "text": "About",
+        "link": "/about/"
+      },
+      {
         "text": "Contact",
         "link": "mailto:jt.houk@outlook.com?subject=Hello&body="
       }

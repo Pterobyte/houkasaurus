@@ -1,7 +1,7 @@
 ---
 home: true
 doc_id: homepage
-heroImage: /logo.png
+heroImage: /itsme-round-200.png
 heroText: Fullstack Web Developer
 actionText: Projects →
 actionLink: /projects/
