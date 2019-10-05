@@ -29,8 +29,7 @@ module.exports = {
     ],
     "sidebar": {
       "/blog/": [
-        "",
-        "how-to-bypass-censorship-with-shadowsocks"
+        "how-to-configure-ssl-on-aliyun-dns-for-an-aws-application-load-balancer-for-0"
       ],
       "/projects/": [
         "",
