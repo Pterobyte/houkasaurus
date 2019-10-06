@@ -25,6 +25,9 @@
         />
       </p>
     </div>
+    <section>
+      <center id="newsletter" class="section"></center>
+    </section>
 <!-- TODO: slider -->
     <div
       class="features"
@@ -59,16 +62,27 @@ export default {
   components: { NavLink, Metadata },
 
   computed: {
-    data () {
+    data() {
       return this.$page.frontmatter
     },
 
-    actionLink () {
+    actionLink() {
       return {
         link: this.data.actionLink,
         text: this.data.actionText
       }
+    },
+
+    newsletter() {
+      const newsletterScript = document.createElement('script')
+      newsletterScript.setAttribute('src', 'https://relentless-motivator-5570.ck.page/4bdab7d0b8/index.js')
+      newsletterScript.setAttribute('data-uid', '4bdab7d0b8')
+      return newsletterScript
     }
+  },
+
+  mounted() {
+    document.querySelector('#newsletter').appendChild(this.newsletter)
   }
 }
 </script>
@@ -119,6 +133,7 @@ export default {
         color var(--button-text-color)
   .features
     border-top 1px solid var(--border-color)
+    border-bottom 1px solid var(--border-color)
     padding 1.2rem 0
     margin-top 2.5rem
     display flex
@@ -138,6 +153,10 @@ export default {
       color var(--text-color)
     p
       color var(--text-color)
+
+  .section
+    border-top 1px solid var(--border-color)
+    padding-top 5rem
   .footer
     padding 2.5rem
     border-top 1px solid var(--border-color)

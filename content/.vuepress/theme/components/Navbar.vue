@@ -4,7 +4,7 @@
 
     <router-link
       :to="$localePath"
-      class="home-link"
+      class="home-link logo-circle bounce-letters-animation"
     >
       <img
         class="logo"
@@ -14,7 +14,7 @@
       >
       <span
         ref="siteName"
-        class="site-name bounce-letters"
+        class="site-name bounce-letters-font"
         v-if="$siteTitle"
         :class="{ 'can-hide': $site.themeConfig.logo }"
       >{{ $siteTitle }}</span>
@@ -108,6 +108,13 @@ $navbar-horizontal-padding = 1.5rem
     font-weight 700
     color var(--text-color)
     position relative
+  .logo-circle
+    background-color $accentColor
+    border-radius 50%
+    height 2.3rem
+    width 2.3rem
+    text-align center
+
 
   .links
     padding-left 1.5rem
