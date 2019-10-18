@@ -26,7 +26,7 @@
       </p>
     </div>
     <section>
-      <center id="newsletter" class="section"></center>
+      <center id="newsletter" class="section"><h3>Subscribe for the freshest of posts</h3></center>
     </section>
 <!-- TODO: slider -->
     <div
@@ -123,7 +123,6 @@ export default {
       padding 0.8rem 1.6rem
       border-radius 4px
       box-sizing border-box
-      border-bottom 1px solid darken($accentColor, 10%)
       background-size: 200% 200%
       background-position: 10% 0%
       transition: all .1s ease-in-out
@@ -133,7 +132,6 @@ export default {
         color var(--button-text-color)
   .features
     border-top 1px solid var(--border-color)
-    border-bottom 1px solid var(--border-color)
     padding 1.2rem 0
     margin-top 2.5rem
     display flex
@@ -154,8 +152,7 @@ export default {
     p
       color var(--text-color)
 
-  .section
-    border-top 1px solid var(--border-color)
+  .section)
     padding-top 5rem
   .footer
     padding 2.5rem

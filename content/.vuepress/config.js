@@ -29,6 +29,8 @@ module.exports = {
     ],
     "sidebar": {
       "/blog/": [
+        "",
+        "a-weekly-commute-in-podcasts",
         "how-to-configure-ssl-on-aliyun-dns-for-an-aws-application-load-balancer-for-0"
       ],
       "/projects/": [
