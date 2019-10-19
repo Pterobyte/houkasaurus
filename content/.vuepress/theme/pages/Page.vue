@@ -26,9 +26,7 @@
       </div>
     </div>
 
-    <section>
-      <center id="newsletter" class="section"><h3>Subscribe for the freshest of posts</h3></center>
-    </section>
+    <newsletter />
 
     <div class="page-nav" v-if="prev || next">
       <p class="inner">
@@ -66,9 +64,12 @@
 </template>
 
 <script>
+import Newsletter from '../components/Newsletter.vue'
 import { resolvePage, normalize, outboundRE, endingSlashRE } from '../util'
 
 export default {
+  components: { Newsletter },
+
   props: ['sidebarItems'],
 
   computed: {
@@ -139,13 +140,6 @@ export default {
         this.$site.themeConfig.editLinkText ||
         `Edit this page`
       )
-    },
-
-    newsletter() {
-      const newsletterScript = document.createElement('script')
-      newsletterScript.setAttribute('src', 'https://relentless-motivator-5570.ck.page/4bdab7d0b8/index.js')
-      newsletterScript.setAttribute('data-uid', '4bdab7d0b8')
-      return newsletterScript
     }
   },
 
@@ -177,10 +171,6 @@ export default {
         path
       )
     }
-  },
-
-  mounted() {
-    document.querySelector('#newsletter').appendChild(this.newsletter)
   }
 }
 

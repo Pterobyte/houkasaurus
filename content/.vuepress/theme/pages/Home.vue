@@ -25,9 +25,9 @@
         />
       </p>
     </div>
-    <section>
-      <center id="newsletter" class="section"><h3>Subscribe for the freshest of posts</h3></center>
-    </section>
+
+    <newsletter />
+
 <!-- TODO: slider -->
     <div
       class="features"
@@ -57,9 +57,10 @@
 <script>
 import NavLink from '../components/NavLink.vue'
 import Metadata from '../components/Metadata.vue'
+import Newsletter from '../components/Newsletter.vue'
 
 export default {
-  components: { NavLink, Metadata },
+  components: { NavLink, Metadata, Newsletter },
 
   computed: {
     data() {
@@ -72,17 +73,6 @@ export default {
         text: this.data.actionText
       }
     },
-
-    newsletter() {
-      const newsletterScript = document.createElement('script')
-      newsletterScript.setAttribute('src', 'https://relentless-motivator-5570.ck.page/4bdab7d0b8/index.js')
-      newsletterScript.setAttribute('data-uid', '4bdab7d0b8')
-      return newsletterScript
-    }
-  },
-
-  mounted() {
-    document.querySelector('#newsletter').appendChild(this.newsletter)
   }
 }
 </script>
