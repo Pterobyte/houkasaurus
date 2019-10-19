@@ -3,6 +3,7 @@
     <section>
       <header>{{name}}</header>
       <div class="card" :style="backgroundImageStyle"></div>
+      <!-- TODO: content clamp with link -->
     </section>
   </a>
 </template>

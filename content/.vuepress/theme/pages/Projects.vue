@@ -33,7 +33,7 @@ export default {
 @require '../styles/wrapper.styl'
 .projects
   display grid
-  grid-template-columns repeat(auto-fill, minmax(20rem,1fr))
+  grid-template-columns repeat(auto-fill, minmax(calc(40vw),1fr))
   grid-auto-rows: auto
   grid-gap 2rem
   padding 8rem 3rem
