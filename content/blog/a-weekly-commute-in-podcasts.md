@@ -7,8 +7,8 @@
   "status": {
     ".tag": "active"
   },
-  "revision": 2865,
-  "last_updated_date": "2019-10-18T07:52:26Z",
+  "revision": 2897,
+  "last_updated_date": "2019-10-18T08:27:30Z",
   "last_editor": "jt.houk@outlook.com"
 }
 ---
@@ -38,7 +38,7 @@ Now that the week is chugging along, I like to get into some trade skills. These
 
 
 - [Command Line Heroes](https://www.redhat.com/en/command-line-heroes) - a lighthearted but very well-produced show from Red Hat and down-to-earth developer Saran Yitbarek talk about open source software’s history and place in modern tech.
-- [Hello Monday](https://www.hellomonday.com/) - this was a surprisingly good gem from the team behind LinkedIn on topics around work culture and good habits for success.
+- [Hello Monday](https://www.hellomonday.com/) - this was a surprisingly good find from the team behind LinkedIn on topics around work culture and good habits for success. I think you’re allowed to listen on Wednesdays too, but I’m not sure.
 ## Thursday - Art/Design
 
 The hump has passed. The week is nearing its twilight. Lets appreciate something beautiful together.
