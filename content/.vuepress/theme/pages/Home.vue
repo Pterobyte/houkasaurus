@@ -152,7 +152,7 @@ export default {
     p
       color var(--text-color)
 
-  .section)
+  .section
     padding-top 5rem
   .footer
     padding 2.5rem
