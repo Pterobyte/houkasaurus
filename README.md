@@ -2,7 +2,7 @@
 
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://github.com/Pterobyte/houkasaurus/graphs/commit-activity">
+  <a href="https://github.com/HoukasaurusRex/houkasaurus/graphs/commit-activity">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" />
   </a>
   <a href="https://david-dm.org/pterobyte/houkasaurus">
@@ -17,7 +17,7 @@
   <a href="https://app.netlify.com/sites/houkasaurus/deploys">
     <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/db1500c5-d307-4fa7-acd0-60543ece4624/deploy-status" target="_blank" />
   </a>
-  <a href="https://github.com/Pterobyte/jt.houk.space/blob/master/LICENSE">
+  <a href="https://github.com/HoukasaurusRex/jt.houk.space/blob/master/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
   </a>
   <a href="https://twitter.com/CapnAwesome">
@@ -52,11 +52,11 @@ npm run test
 👤 **JT Houk**
 
 * Twitter: [@CapnAwesome](https://twitter.com/CapnAwesome)
-* Github: [@Pterobyte](https://github.com/Pterobyte)
+* Github: [@Pterobyte](https://github.com/HoukasaurusRex)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Pterobyte/jt.houk.space/issues).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/HoukasaurusRex/jt.houk.space/issues).
 
 ## Show your support
 
@@ -68,7 +68,7 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2019 [JT Houk](https://github.com/Pterobyte).<br />
-This project is [MIT](https://github.com/Pterobyte/jt.houk.space/blob/master/LICENSE) licensed.
+Copyright © 2019 [JT Houk](https://github.com/HoukasaurusRex).<br />
+This project is [MIT](https://github.com/HoukasaurusRex/jt.houk.space/blob/master/LICENSE) licensed.
 
 ***

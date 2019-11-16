@@ -32,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Pterobyte/houkasaurus.git"
+    "url": "git+https://github.com/HoukasaurusRex/houkasaurus.git"
   },
   "keywords": [
     "blog",
@@ -42,7 +42,7 @@
   "author": "JT Houk <jt1992@gmail.com> (https://www.jt-houk.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Pterobyte/houkasaurus/issues"
+    "url": "https://github.com/HoukasaurusRex/houkasaurus/issues"
   },
-  "homepage": "https://github.com/Pterobyte/houkasaurus#readme"
+  "homepage": "https://github.com/HoukasaurusRex/houkasaurus#readme"
 }

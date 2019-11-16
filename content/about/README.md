@@ -9,7 +9,7 @@ At some point I've created enough that I started focusing more on making these t
 
 I also make a lot of Open Source apps and components in various laguages and frameworks.
 
-You can check them out at my [Github](https://github.com/Pterobyte)
+You can check them out at my [Github](https://github.com/HoukasaurusRex)
 Or check out what's going on in my [blog](/blog/)
 Or if you want to work with me on something, shoot me an email
 
