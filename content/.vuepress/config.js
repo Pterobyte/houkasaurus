@@ -10,17 +10,23 @@ module.exports = {
       {
         "property": "og:title",
         "description": "JT Houk"
-      },
+      }
+    ],
+    [
       "meta",
       {
         "property": "og:description",
         "description": "Entrepreneur, Writer, and Senior Fullstack Node.js Software Developer"
-      },
+      }
+    ],
+    [
       "meta",
       {
         "property": "og:image",
         "description": "/logo.png"
       },
+    ],
+    [
       "link",
       {
         "rel": "icon",
