@@ -17,7 +17,7 @@
         class="site-name bounce-letters-font"
         v-if="$siteTitle"
         :class="{ 'can-hide': $site.themeConfig.logo }"
-      >{{ $siteTitle }}</span>
+      >JT</span>
     </router-link>
 
     <div

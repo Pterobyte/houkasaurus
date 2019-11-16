@@ -57,7 +57,7 @@ export default {
 #mc_embed_signup 
 	max-width 600px
 	margin 0 auto
-	padding 2rem 2.5rem
+	padding 3rem 2.5rem
 	form 
 		text-align left
 	h2 

@@ -1,8 +1,33 @@
 module.exports = {
   "title": "JT Houk",
-  "description": " ",
+  "description": "Entrepreneur, Writer, and Senior Fullstack Node.js Software Developer",
   "serviceWorker": true,
   "ga": "UA-146443449-1",
+  "evergreen": true,
+  "head": [
+    [
+      "meta",
+      {
+        "property": "og:title",
+        "description": "JT Houk"
+      },
+      "meta",
+      {
+        "property": "og:description",
+        "description": "Entrepreneur, Writer, and Senior Fullstack Node.js Software Developer"
+      },
+      "meta",
+      {
+        "property": "og:image",
+        "description": "/logo.png"
+      },
+      "link",
+      {
+        "rel": "icon",
+        "href": "/favicon.ico"
+      }
+    ]
+  ],
   "themeConfig": {
     "repo": "pterobyte",
     "nav": [
@@ -42,15 +67,5 @@ module.exports = {
         "vue-beijing"
       ]
     }
-  },
-  "head": [
-    [
-      "link",
-      {
-        "rel": "icon",
-        "href": "/favicon.ico"
-      }
-    ]
-  ],
-  "evergreen": true
+  }
 }

@@ -86,7 +86,7 @@ export default {
   margin 0px auto
   .hero
     text-align center
-    padding 2rem 0
+    padding 3.5rem 0
     img
       max-width 100%
       max-height 280px
