@@ -20,8 +20,8 @@
   <a href="https://github.com/HoukasaurusRex/jt.houk.space/blob/master/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
   </a>
-  <a href="https://twitter.com/CapnAwesome">
-    <img alt="Twitter: CapnAwesome" src="https://img.shields.io/twitter/follow/CapnAwesome.svg?style=social" target="_blank" />
+  <a href="https://twitter.com/HoukasaurusRex">
+    <img alt="Twitter: HoukasaurusRex" src="https://img.shields.io/twitter/follow/HoukasaurusRex.svg?style=social" target="_blank" />
   </a>
 </p>
 
@@ -51,7 +51,7 @@ npm run test
 
 👤 **JT Houk**
 
-* Twitter: [@CapnAwesome](https://twitter.com/CapnAwesome)
+* Twitter: [@HoukasaurusRex](https://twitter.com/HoukasaurusRex)
 * Github: [@Pterobyte](https://github.com/HoukasaurusRex)
 
 ## 🤝 Contributing
