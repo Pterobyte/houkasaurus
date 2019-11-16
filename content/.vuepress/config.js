@@ -1,5 +1,5 @@
 module.exports = {
-  "title": "JT",
+  "title": "JT Houk",
   "description": " ",
   "serviceWorker": true,
   "ga": "UA-146443449-1",

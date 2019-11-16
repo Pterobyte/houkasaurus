@@ -2,7 +2,7 @@
 home: true
 doc_id: homepage
 heroImage: /itsme-round-200.png
-heroText: Web Developer
+heroText: JT Houk
 actionText: Projects →
 actionLink: /projects/
 features:
