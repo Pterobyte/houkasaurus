@@ -40,11 +40,13 @@
       }
     },
     mounted () {
-      if (window.DISQUS) {
-        this.reset(window.DISQUS)
-        return
+      if (window) {
+        if (window.DISQUS) {
+          this.reset(window.DISQUS)
+          return
+        }
+        this.init()
       }
-      this.init()
     },
     computed: {
       embed() {
@@ -58,11 +60,13 @@
     },
     watch: {
       identifier() {
-        if (window.DISQUS) {
-          this.reset(window.DISQUS)
-          return
+        if (window) {
+          if (window.DISQUS) {
+            this.reset(window.DISQUS)
+            return
+          }
+          this.init()
         }
-        this.init()
       }
     },
     methods: {

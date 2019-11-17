@@ -77,7 +77,7 @@ export default {
 
   computed: {
     url() {
-      return window.location.origin + this.$page.path
+      return `${process.env.NODE_ENV === 'development' ? window.location.origin : 'https://jt.houk.space'}${this.$page.path}`
     },
     name() {
       return this.$page.key
@@ -89,9 +89,15 @@ export default {
       return this.$page.path.includes('/blog/')
     },
 
+    frontmatter() {
+      return {
+        lastUpdated: this.$page.lastUpdated || this.$page.frontmatter.last_updated_date
+      }
+    },
+
     lastUpdated () {
-      if (this.$page.lastUpdated) {
-        return new Date(this.$page.lastUpdated).toLocaleString(this.$lang)
+      if (this.frontmatter.lastUpdated) {
+        return new Date(this.frontmatter.lastUpdated).toLocaleString(this.$lang)
       }
     },
     
