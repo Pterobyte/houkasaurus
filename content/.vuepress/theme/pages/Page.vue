@@ -59,20 +59,36 @@
       </p>
     </div>
 
+    <disqus v-if="isBlogPage" shortname="houk" :identifier="name" :url="url" :title="title"/>
+
     <slot name="bottom"/>
   </div>
 </template>
 
 <script>
 import Newsletter from '../components/Newsletter.vue'
+import Disqus from '../components/Disqus.vue'
 import { resolvePage, normalize, outboundRE, endingSlashRE } from '../util'
 
 export default {
-  components: { Newsletter },
+  components: { Newsletter, Disqus },
 
   props: ['sidebarItems'],
 
   computed: {
+    url() {
+      return window.location.origin + this.$page.path
+    },
+    name() {
+      return this.$page.key
+    },
+    title() {
+      return this.$page.title
+    },
+    isBlogPage() {
+      return this.$page.path.includes('/blog/')
+    },
+
     lastUpdated () {
       if (this.$page.lastUpdated) {
         return new Date(this.$page.lastUpdated).toLocaleString(this.$lang)

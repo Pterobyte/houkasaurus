@@ -27,6 +27,7 @@
 
 <script>
 export default {
+  name: 'Newsletter',
   computed: {
     connect() {
       const script = document.createElement('script')
