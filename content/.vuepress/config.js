@@ -24,7 +24,7 @@ module.exports = {
       {
         "property": "og:image",
         "description": "/logo.png"
-      },
+      }
     ],
     [
       "link",
@@ -61,6 +61,7 @@ module.exports = {
     "sidebar": {
       "/blog/": [
         "a-weekly-commute-in-podcasts",
+        "agile-cooking",
         "how-to-configure-ssl-on-aliyun-dns-for-an-aws-application-load-balancer-for-0"
       ],
       "/projects/": [
