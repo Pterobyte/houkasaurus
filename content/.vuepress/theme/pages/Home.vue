@@ -24,6 +24,9 @@
           :item="actionLink"
         />
       </p>
+
+      <buy-me-a-coffee />
+
     </div>
 
     <newsletter />
@@ -58,9 +61,10 @@
 import NavLink from '../components/NavLink.vue'
 import Metadata from '../components/Metadata.vue'
 import Newsletter from '../components/Newsletter.vue'
+import BuyMeACoffee from '../components/BuyMeACoffee.vue'
 
 export default {
-  components: { NavLink, Metadata, Newsletter },
+  components: { NavLink, Metadata, Newsletter, BuyMeACoffee },
 
   computed: {
     data() {
@@ -109,7 +113,7 @@ export default {
       display inline-block
       font-size 1.2rem
       color var(--bg-color)
-      background $btnBgColor
+      background var(--btn-color-primary)
       padding 0.8rem 1.6rem
       border-radius 4px
       box-sizing border-box

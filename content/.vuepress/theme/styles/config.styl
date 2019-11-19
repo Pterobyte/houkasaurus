@@ -20,7 +20,7 @@ $textColor = hsl(206, 9%, 15%)
 $darkTextColor = hsl(206, 9%, 15%)
 $darkTextHLColor = hsl(0, 39%, 65%)
 $borderColor = #eaecef
-$btnBgColor = linear-gradient(
+$btnColorPrimary = linear-gradient(
   45deg,
   $accentColor 0%,
   $accentColor 12%,
@@ -28,25 +28,37 @@ $btnBgColor = linear-gradient(
   lighten($accentColor, 20%) 99%,
   $accentColor 100%
 )
+$btnColorSecondary = #eee
 $codeBgColor = #282c34
 $bgColor = #fff
-$shadowColor = #888888
+$shadowColor = rgba(190, 190, 190, 0.5)
 $error = #D92525
+$success = #529214
 
 :root
   --bg-color: $bgColor
+  --btn-color-primary: $btnColorPrimary
+  --btn-color-secondary: $btnColorSecondary
   --border-color: $borderColor
   --text-color: $textColor
   --darken-text-color: $darkTextColor
   --shadow-color: $shadowColor
+  --shadow-mid-color: lighten($shadowColor, 10%)
+  --box-shadow-back: 0px 1px 1px $shadowColor
+  --box-shadow-mid: 0px 1px 1.5px 1.5px lighten($shadowColor, 5%)
   --button-text-color: #fff
   --error: $error
+  --success: $success
 
 // Dark theme colors
 @media (prefers-color-scheme: dark)
   :root
-    --bg-color: hsl(206, 9%, 15%)
-    --border-color: #888888
+    --bg-color: darken($bgColor, 80%)
+    --btn-color-secondary: darken($btnColorSecondary, 70%)
+    --border-color: darken($borderColor, 50%)
     --text-color: #fff
     --darken-text-color: #eaecef
-    --shadow-color: black
+    --shadow-color: darken($shadowColor, 20%)
+    --shadow-mid-color: darken($shadowColor, 10%)
+    --box-shadow-back: 0px 1px 1px darken($shadowColor, 80%)
+    --box-shadow-mid: 0px 1px 1.5px 1.5px darken($shadowColor, 75%)
