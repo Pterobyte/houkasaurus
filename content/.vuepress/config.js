@@ -9,21 +9,21 @@ module.exports = {
       "meta",
       {
         "property": "og:title",
-        "description": "JT Houk"
+        "content": "JT Houk"
       }
     ],
     [
       "meta",
       {
         "property": "og:description",
-        "description": "Entrepreneur, Writer, and Senior Fullstack Node.js Software Developer"
+        "content": "Entrepreneur, Writer, and Senior Fullstack Node.js Software Developer"
       }
     ],
     [
       "meta",
       {
         "property": "og:image",
-        "description": "https://jt.houk.space/logo.png"
+        "content": "https://jt.houk.space/logo.png"
       }
     ],
     [
