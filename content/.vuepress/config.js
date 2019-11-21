@@ -84,7 +84,7 @@ module.exports = {
       },
       {
         "text": "Contact",
-        "link": "mailto:jt.houk@outlook.com?subject=Hello&body="
+        "link": "mailto:jt@houk.space?subject=Hello%20From%20Your%20Site&body="
       }
     ],
     "sidebar": {
