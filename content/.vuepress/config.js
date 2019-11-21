@@ -23,7 +23,7 @@ module.exports = {
       "meta",
       {
         "property": "og:image",
-        "description": "/logo.png"
+        "description": "https://jt.houk.space/logo.png"
       }
     ],
     [
