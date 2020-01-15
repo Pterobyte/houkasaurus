@@ -13,7 +13,7 @@
 }
 ---
 # Doomsday Clock
-[pterobyte.github.io](https://pterobyte.github.io/doomsday-clock/)
+[HoukasaurusRex.github.io](https://HoukasaurusRex.github.io/doomsday-clock/)
 <!-- more -->
 
 update content

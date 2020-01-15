@@ -5,11 +5,11 @@
   <a href="https://github.com/HoukasaurusRex/houkasaurus/graphs/commit-activity">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" />
   </a>
-  <a href="https://david-dm.org/pterobyte/houkasaurus">
-    <img alt="David Dependencies Status" src="https://david-dm.org/pterobyte/houkasaurus.svg" target="_blank" />
+  <a href="https://david-dm.org/HoukasaurusRex/houkasaurus">
+    <img alt="David Dependencies Status" src="https://david-dm.org/HoukasaurusRex/houkasaurus.svg" target="_blank" />
   </a>
-  <a href="https://lgtm.com/projects/g/Pterobyte/jt.houk.space/context:javascript">
-    <img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/Pterobyte/jt.houk.space.svg?logo=lgtm&logoWidth=18" target="_blank" />
+  <a href="https://lgtm.com/projects/g/HoukasaurusRex/jt.houk.space/context:javascript">
+    <img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/HoukasaurusRex/jt.houk.space.svg?logo=lgtm&logoWidth=18" target="_blank" />
   </a>
   <a href="https://opensource.org/licenses/MIT">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
@@ -52,7 +52,7 @@ npm run test
 👤 **JT Houk**
 
 * Twitter: [@HoukasaurusRex](https://twitter.com/HoukasaurusRex)
-* Github: [@Pterobyte](https://github.com/HoukasaurusRex)
+* Github: [@HoukasaurusRex](https://github.com/HoukasaurusRex)
 
 ## 🤝 Contributing
 

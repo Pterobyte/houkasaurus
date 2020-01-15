@@ -64,7 +64,7 @@ module.exports = {
     ]
   ],
   "themeConfig": {
-    "repo": "pterobyte",
+    "repo": "HoukasaurusRex",
     "nav": [
       {
         "text": "Home",
