@@ -52,7 +52,7 @@ Front end to JT Houk's blog site.
 * [Vuepress](https://vuepress.org)
 
 <!-- GETTING STARTED -->
-## Getting Started
+## ☕️ Getting Started
 
 To get it running locally, install dependencies with yarn and run the commands
 
@@ -77,14 +77,14 @@ yarn fetch:content
 yarn dev
 ```
 
-## Author
+## 🤓 Author
 
-👤 **JT Houk**
+### JT Houk
 
 * Twitter: [@HoukasaurusRex][twitter-url]
 * Github: [@HoukasaurusRex][github-url]
 
-[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/default-red.png =51x217)][coffee-url]
+<a href="https://www.buymeacoffee.com/HoukasaurusRex" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-red.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
 
 ## 🤝 Contributing
 
@@ -99,17 +99,17 @@ Check out the [issues page][issues-url]
 5. Open a Pull Request
 
 <!-- ROADMAP -->
-## Roadmap
+## 🗺 Roadmap
 
 See the [open issues][issues-url] for a list of proposed features (and known issues)
 
 <!-- DEPENDENCIES -->
-## Dependencies
+## 📦 Dependencies
 
 [![FOSSA Status][fossa-scan]][fossa-url]
 
 <!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
+## ✨ Acknowledgements
 
 * [Best README Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
@@ -139,8 +139,8 @@ See the [open issues][issues-url] for a list of proposed features (and known iss
 [prettier-url]: https://github.com/prettier/prettier
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/jt-houk/
-[product-screenshot]: https://raw.githubusercontent.com/ritaly/README-cheatsheet/master/img/screenshot.png
-[product-url]: https://github.com/HoukasaurusRex/jt.houk.space
+[product-screenshot]: ./assets/screen_shot.png
+[product-url]: https://jt.houk.space
 [lgtm-shield]: https://img.shields.io/lgtm/grade/javascript/g/HoukasaurusRex/jt.houk.space.svg?logo=lgtm&logoWidth=18
 [lgtm-url]: https://lgtm.com/projects/g/HoukasaurusRex/jt.houk.space/context:javascript
 [fossa-shield]: https://app.fossa.com/api/projects/git%2Bgithub.com%2FAkkadu%2Fgithub-template-javascript.svg?type=shield
@@ -150,5 +150,3 @@ See the [open issues][issues-url] for a list of proposed features (and known iss
 [license-url]: https://opensource.org/licenses/MIT
 [twitter-shield]: https://img.shields.io/twitter/follow/HoukasaurusRex.svg?style=social
 [twitter-url]: https://twitter.com/HoukasaurusRex
-[coffee-button]: https://cdn.buymeacoffee.com/buttons/default-red.png =51x217
-[coffee-url]: https://www.buymeacoffee.com/HoukasaurusRex
