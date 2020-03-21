@@ -1,74 +1,154 @@
-<h1 align="center">Welcome to jt.houk.space 👋</h1>
+# [![Blog][logo]][url] jt.houk.space Vuepress Site
 
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://github.com/HoukasaurusRex/houkasaurus/graphs/commit-activity">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" />
-  </a>
-  <a href="https://david-dm.org/HoukasaurusRex/houkasaurus">
-    <img alt="David Dependencies Status" src="https://david-dm.org/HoukasaurusRex/houkasaurus.svg" target="_blank" />
-  </a>
-  <a href="https://lgtm.com/projects/g/HoukasaurusRex/jt.houk.space/context:javascript">
-    <img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/HoukasaurusRex/jt.houk.space.svg?logo=lgtm&logoWidth=18" target="_blank" />
-  </a>
-  <a href="https://opensource.org/licenses/MIT">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
-  </a>
-  <a href="https://app.netlify.com/sites/houkasaurus/deploys">
-    <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/db1500c5-d307-4fa7-acd0-60543ece4624/deploy-status" target="_blank" />
-  </a>
-  <a href="https://github.com/HoukasaurusRex/jt.houk.space/blob/master/LICENSE">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
-  </a>
-  <a href="https://twitter.com/HoukasaurusRex">
-    <img alt="Twitter: HoukasaurusRex" src="https://img.shields.io/twitter/follow/HoukasaurusRex.svg?style=social" target="_blank" />
-  </a>
-</p>
+<!-- PROJECT SHIELDS -->
+<!--
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+*** See bottom of page for list of reference links
+-->
+[![Netlify Status][netlify-shield]][netlify-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![Language grade: JavaScript][lgtm-shield]][lgtm-url]
+[![FOSSA Status][fossa-shield]][fossa-url]
+![Version][version-shield]
+[![Maintenance][maintenance-shield]][maintenance-url]
+[![David Dependencies Status][dependencies-shield]][dependencies-url]
+[![styled with prettier][prettier-shield]][prettier-url]
+[![License: MIT][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Twitter: HoukasaurusRex][twitter-shield]][twitter-url]
 
-> Personal blog for JT Houk
+Front end to JT Houk's blog site.
 
-### 🏠 [Homepage](jt.houk.space)
+[Check it out »][product-url]
 
-## Install
+[Report Bug][issues-url] • [Request Feature][issues-url]
+
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
+
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Usage](#usage)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[![Houkasaurus Screen Shot][product-screenshot]][product-url]
+
+### Built With
+
+* [Vuepress](https://vuepress.org)
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+To get it running locally, install dependencies with yarn and run the commands
+
+### Prerequisites
+
+* yarn
 
 ```sh
-npm install
+npm install yarn@latest -g
 ```
 
-## Usage
+### Installation
 
 ```sh
-npm run dev:content
-```
+# Install dependencies
+yarn install
 
-## Run tests
+# Fetch content from CMS backend
+yarn fetch:content
 
-```sh
-npm run test
+# Run local dev server
+yarn dev
 ```
 
 ## Author
 
 👤 **JT Houk**
 
-* Twitter: [@HoukasaurusRex](https://twitter.com/HoukasaurusRex)
-* Github: [@HoukasaurusRex](https://github.com/HoukasaurusRex)
+* Twitter: [@HoukasaurusRex][twitter-url]
+* Github: [@HoukasaurusRex][github-url]
+
+[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/default-red.png =51x217)][coffee-url]
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/HoukasaurusRex/jt.houk.space/issues).
+Want to make a change? Any contributions you make are **greatly appreciated**.
 
-## Show your support
+Check out the [issues page][issues-url]
 
-Give a ⭐️ if this project helped you!
+1. Clone the repo
+2. Create your Feature Branch (`gco -b release/my-project`)
+3. Commit your Changes (`git commit -m 'add: small addition'`)
+4. Push to the Branch (`git push origin release/my-project`)
+5. Open a Pull Request
 
-<a href="https://www.patreon.com/TerminallyChillSoftware">
-  <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
-</a>
+<!-- ROADMAP -->
+## Roadmap
 
-## 📝 License
+See the [open issues][issues-url] for a list of proposed features (and known issues)
 
-Copyright © 2019 [JT Houk](https://github.com/HoukasaurusRex).<br />
-This project is [MIT](https://github.com/HoukasaurusRex/jt.houk.space/blob/master/LICENSE) licensed.
+<!-- DEPENDENCIES -->
+## Dependencies
 
-***
+[![FOSSA Status][fossa-scan]][fossa-url]
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+
+* [Best README Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
+* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Img Shields](https://shields.io)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[logo]: https://res.cloudinary.com/jthouk/image/upload/e_improve,w_30,h_30/v1582802259/Profiles/jt-2d.png
+[url]: https://jt.houk.space
+[github-url]: https://github.com/HoukasaurusRex
+[netlify-shield]: https://api.netlify.com/api/v1/badges/db1500c5-d307-4fa7-acd0-60543ece4624/deploy-status
+[netlify-url]: https://app.netlify.com/sites/houkasaurus/deploys
+[contributors-shield]: https://img.shields.io/github/contributors/HoukasaurusRex/jt.houk.space.svg?style=flat-square
+[contributors-url]: https://github.com/HoukasaurusRex/jt.houk.space/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/HoukasaurusRex/jt.houk.space.svg?style=flat-square
+[forks-url]: https://github.com/HoukasaurusRex/jt.houk.space/network/members
+[stars-shield]: https://img.shields.io/github/stars/HoukasaurusRex/jt.houk.space.svg?style=flat-square
+[stars-url]: https://github.com/HoukasaurusRex/jt.houk.space/stargazers
+[issues-shield]: https://img.shields.io/github/issues/HoukasaurusRex/jt.houk.space.svg?style=flat-square
+[issues-url]: https://github.com/HoukasaurusRex/jt.houk.space/issues
+[version-shield]: https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000
+[maintenance-shield]: https://img.shields.io/badge/Maintained%3F-yes-green.svg
+[maintenance-url]: https://github.com/HoukasaurusRex/houkasaurus/graphs/commit-activity
+[dependencies-shield]: https://david-dm.org/HoukasaurusRex/houkasaurus.svg
+[dependencies-url]: https://david-dm.org/HoukasaurusRex/houkasaurus
+[prettier-shield]: https://img.shields.io/badge/styled_with-prettier-ff69b4.svg
+[prettier-url]: https://github.com/prettier/prettier
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/jt-houk/
+[product-screenshot]: https://raw.githubusercontent.com/ritaly/README-cheatsheet/master/img/screenshot.png
+[product-url]: https://github.com/HoukasaurusRex/jt.houk.space
+[lgtm-shield]: https://img.shields.io/lgtm/grade/javascript/g/HoukasaurusRex/jt.houk.space.svg?logo=lgtm&logoWidth=18
+[lgtm-url]: https://lgtm.com/projects/g/HoukasaurusRex/jt.houk.space/context:javascript
+[fossa-shield]: https://app.fossa.com/api/projects/git%2Bgithub.com%2FAkkadu%2Fgithub-template-javascript.svg?type=shield
+[fossa-url]: https://app.fossa.com/projects/git%2Bgithub.com%2FAkkadu%2Fgithub-template-javascript?ref=badge_shield
+[fossa-scan]: https://app.fossa.com/api/projects/git%2Bgithub.com%2FAkkadu%2Fgithub-template-javascript.svg?type=large
+[license-shield]: https://img.shields.io/badge/License-MIT-yellow.svg
+[license-url]: https://opensource.org/licenses/MIT
+[twitter-shield]: https://img.shields.io/twitter/follow/HoukasaurusRex.svg?style=social
+[twitter-url]: https://twitter.com/HoukasaurusRex
+[coffee-button]: https://cdn.buymeacoffee.com/buttons/default-red.png =51x217
+[coffee-url]: https://www.buymeacoffee.com/HoukasaurusRex
