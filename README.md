@@ -49,7 +49,7 @@ Front end to JT Houk's blog site.
 
 ### Built With
 
-* [Vuepress](https://vuepress.org)
+* [Vuepress](https://vuepress.vuejs.org)
 
 <!-- GETTING STARTED -->
 ## ☕️ Getting Started
