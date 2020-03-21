@@ -143,9 +143,9 @@ See the [open issues][issues-url] for a list of proposed features (and known iss
 [product-url]: https://jt.houk.space
 [lgtm-shield]: https://img.shields.io/lgtm/grade/javascript/g/HoukasaurusRex/jt.houk.space.svg?logo=lgtm&logoWidth=18
 [lgtm-url]: https://lgtm.com/projects/g/HoukasaurusRex/jt.houk.space/context:javascript
-[fossa-shield]: https://app.fossa.com/api/projects/git%2Bgithub.com%2FAkkadu%2Fgithub-template-javascript.svg?type=shield
-[fossa-url]: https://app.fossa.com/projects/git%2Bgithub.com%2FAkkadu%2Fgithub-template-javascript?ref=badge_shield
-[fossa-scan]: https://app.fossa.com/api/projects/git%2Bgithub.com%2FAkkadu%2Fgithub-template-javascript.svg?type=large
+[fossa-shield]: https://app.fossa.com/api/projects/git%2Bgithub.com%2FHoukasaurusRex%2Fjt.houk.space.svg?type=shield
+[fossa-url]: https://app.fossa.com/projects/git%2Bgithub.com%2FHoukasaurusRex%2Fjt.houk.space?ref=badge_shield
+[fossa-scan]: https://app.fossa.com/api/projects/git%2Bgithub.com%2FHoukasaurusRex%2Fjt.houk.space.svg?type=large
 [license-shield]: https://img.shields.io/badge/License-MIT-yellow.svg
 [license-url]: https://opensource.org/licenses/MIT
 [twitter-shield]: https://img.shields.io/twitter/follow/HoukasaurusRex.svg?style=social
