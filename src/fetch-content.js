@@ -4,14 +4,12 @@ const dotenv = require('dotenv-defaults')
 const fetch = require('node-fetch')
 const AbortController = require('abort-controller')
 const { omit } = require('lodash')
-
-const controller = new AbortController()
-const { signal, abort } = controller
-const timeout = setTimeout(() => abort, 300)
+const YAML = require('json2yaml')
+// const vueConfig = require('../content/.vuepress/config')
 
 dotenv.config()
 
-const jsonToFrontmatter = json => `---\n${JSON.stringify(json, null, 2)}\n---\n`
+const jsonToFrontmatter = json => `${YAML.stringify(json)}\n---\n`
 
 const addFrontmatterToPage = item => {
   const meta = omit(item, ['content'])
@@ -35,7 +33,8 @@ const mkDirIfNotExists = async dir => {
     await fs.mkdir(dir)
   }
 }
-const titleToFilename = title => title.toLowerCase().replace(/ /g, '_') + '.md'
+const safeFilename = name => name.toLowerCase().replace(/[^a-z0-9]/gi, '_')
+const titleToFilename = title => safeFilename(title) + '.md'
 
 const writeFiles = ({ content, folder }) =>
   Promise.all(
@@ -64,6 +63,9 @@ const handleError = (error, resource) => {
 const contentAPI = 'https://cms.houk.space'
 
 const fetchContent = async (resource = '') => {
+  const controller = new AbortController()
+  const { signal, abort } = controller
+  const timeout = setTimeout(() => abort, 300)
   try {
     const folder = resource === 'landing' ? '' : resource
     const res = await fetch(`${contentAPI}/${resource}`, { signal })

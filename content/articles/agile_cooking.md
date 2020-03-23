@@ -1,12 +1,14 @@
 ---
-{
-  "id": 2,
-  "category": "cooking",
-  "Title": "Agile Cooking",
-  "created_at": "2020-03-23T07:19:55.187Z",
-  "updated_at": "2020-03-23T08:45:54.787Z",
-  "title": "Agile Cooking"
-}
+  id: 2
+  category: "cooking"
+  Title: "Agile Cooking"
+  created_at: "2020-03-23T07:19:55.187Z"
+  updated_at: "2020-03-23T08:45:54.787Z"
+  title: "Agile Cooking"
+  tags: null
+  description: null
+  image: []
+
 ---
 # Agile Cooking
 

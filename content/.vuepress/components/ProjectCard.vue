@@ -77,7 +77,7 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
-@import '../styles/config.styl'
+
 .card
   --image-url ''
   background-image var(--image-url)

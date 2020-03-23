@@ -123,6 +123,8 @@
 </script>
 
 <style lang="stylus">
+
 .disqus
   padding 2rem 2.5rem
+
 </style>
