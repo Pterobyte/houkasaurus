@@ -1,15 +1,11 @@
 ---
 {
-  "doc_id": "mPwg5xCS1DkYKmGBkIojG",
-  "owner": "jt.houk@outlook.com",
-  "title": "A Weekly Commute in Podcasts",
-  "created_date": "2019-10-18T03:19:26Z",
-  "status": {
-    ".tag": "active"
-  },
-  "revision": 2897,
-  "last_updated_date": "2019-10-18T08:27:30Z",
-  "last_editor": "jt.houk@outlook.com"
+  "id": 3,
+  "category": "lifestyle",
+  "Title": "A Weekly Commute in Podcasts",
+  "created_at": "2020-03-23T07:20:36.125Z",
+  "updated_at": "2020-03-23T08:45:44.568Z",
+  "title": "A Weekly Commute in Podcasts"
 }
 ---
 # A Weekly Commute in Podcasts

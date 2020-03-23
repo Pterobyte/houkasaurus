@@ -12,9 +12,11 @@
     "test": "echo 'No tests specified'"
   },
   "dependencies": {
+    "abort-controller": "^3.0.0",
     "dotenv-defaults": "^1.0.2",
     "dropbox-paper-cms": "^1.0.16",
     "idb": "^4.0.4",
+    "lodash": "^4.17.15",
     "markdown-it-for-inline": "^0.1.1",
     "markdown-it-front-matter": "^0.1.2",
     "vue-disqus": "^3.0.5"

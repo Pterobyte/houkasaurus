@@ -1,15 +1,11 @@
 ---
 {
-  "doc_id": "cwlJdhhJn5gphpcieteqy",
-  "owner": "jt.houk@outlook.com",
-  "title": "How to Configure SSL on Aliyun DNS for an AWS Application Load Balancer for $0",
-  "created_date": "2019-10-05T07:06:24Z",
-  "status": {
-    ".tag": "active"
-  },
-  "revision": 384,
-  "last_updated_date": "2019-10-05T09:11:16Z",
-  "last_editor": "jt.houk@outlook.com"
+  "id": 1,
+  "category": "coding",
+  "Title": "How to Configure SSL on Aliyun DNS for an AWS Application Load Balancer for $0",
+  "created_at": "2020-03-23T07:18:49.814Z",
+  "updated_at": "2020-03-23T08:45:24.716Z",
+  "title": "How to Configure SSL on Aliyun DNS for an AWS Application Load Balancer for $0"
 }
 ---
 # How to Configure SSL on Aliyun DNS for an AWS Application Load Balancer for $0

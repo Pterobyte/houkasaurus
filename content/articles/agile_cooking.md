@@ -1,15 +1,11 @@
 ---
 {
-  "doc_id": "AEPRjBwHdzyF12lFpgusC",
-  "owner": "jt.houk@outlook.com",
-  "title": "Agile Cooking",
-  "created_date": "2019-11-17T06:15:10Z",
-  "status": {
-    ".tag": "active"
-  },
-  "revision": 3646,
-  "last_updated_date": "2019-11-18T03:59:12Z",
-  "last_editor": "jt.houk@outlook.com"
+  "id": 2,
+  "category": "cooking",
+  "Title": "Agile Cooking",
+  "created_at": "2020-03-23T07:19:55.187Z",
+  "updated_at": "2020-03-23T08:45:54.787Z",
+  "title": "Agile Cooking"
 }
 ---
 # Agile Cooking

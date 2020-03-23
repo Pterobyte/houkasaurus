@@ -15,8 +15,8 @@ module.exports = {
       type: $page => ['articles', 'posts', 'blog'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
       url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
       image: ($page, $site) => $page.frontmatter.image && (($site.themeConfig.domain || '') + $page.frontmatter.image),
-      publishedAt: $page => $page.frontmatter.date && new Date($page.frontmatter.date),
-      modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
+      publishedAt: $page => $page.frontmatter.created_at && new Date($page.frontmatter.created_at),
+      modifiedAt: $page => $page.updated_at && new Date($page.updated_at),
     }
   },
   "head": [
@@ -38,7 +38,7 @@ module.exports = {
       "meta",
       {
         "property": "og:image",
-        "content": "https://jt.houk.space/logo.png"
+        "content": "https://jt.houk.space/itsme-round-200.png"
       }
     ],
     [
