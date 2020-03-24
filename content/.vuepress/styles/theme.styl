@@ -1,0 +1,46 @@
+html
+  padding 0
+  margin 0
+.theme-container
+  color var(--text-color)
+  background-color var(--bg-color)
+  a
+    color $accentColor
+  .home
+    background-color var(--bg-color)
+    .features
+      border-top 1px solid var(--border-color)
+      *
+        color var(--text-color)
+    .hero
+      .description
+        color var(--text-color)
+  .sidebar
+    background-color var(--bg-color)
+    border-right 1px solid var(--border-color)
+    .sidebar-link
+      color var(--text-color)
+      &.active
+        border-left-color $accentColor
+  .navbar
+    background-color var(--bg-color)
+    border-bottom 1px solid var(--border-color)
+    .site-name
+      color var(--text-color)
+    .search-box
+      input
+        background-color var(--bg-color)
+        border 1px solid var(--border-color)
+    .links
+      background-color var(--bg-color)
+      .nav-link
+        &:hover
+          color var(--text-color)
+          border-bottom 2px solid $accentColor
+      .router-link-active
+        color var(--text-color)
+        border-bottom 2px solid $accentColor
+  .page
+    background-color var(--bg-color)
+    .inner
+      border-top 1px solid var(--border-color)

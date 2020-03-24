@@ -1,3 +1,5 @@
 ---
-  sidebar: false
+sidebar: false
 ---
+
+<Projects />
