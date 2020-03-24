@@ -109,12 +109,17 @@ const components = {
 const articleComponents = [components.Newsletter, components.Disqus]
 const landingComponents = [components.Newsletter]
 
-fetchContent({ resource: 'articles', components: articleComponents })
-fetchContent({
-  resource: 'projects',
-  readme: `---\nsidebar: false\n---\n${components.Projects}`,
-})
-fetchContent({ resource: 'companies' })
-fetchContent({ resource: 'links' })
-fetchContent({ resource: 'about' })
-fetchContent({ resource: 'landing', components: landingComponents })
+try {
+  fetchContent({ resource: 'articles', components: articleComponents })
+  fetchContent({
+    resource: 'projects',
+    readme: `---\nsidebar: false\n---\n${components.Projects}`,
+  })
+  fetchContent({ resource: 'companies' })
+  fetchContent({ resource: 'links' })
+  fetchContent({ resource: 'about' })
+  fetchContent({ resource: 'landing', components: landingComponents })
+} catch (error) {
+  console.error(error)
+  process.exit(1)
+}
