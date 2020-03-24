@@ -13,18 +13,18 @@ const addFrontmatterToPage = (item = {}) => {
   const meta = omit(item, ['content'])
   return {
     ...item,
-    content: jsonToFrontmatter(meta) + item.content
+    content: jsonToFrontmatter(meta) + item.content,
   }
 }
 const addFrontmatterToContent = (items = [{}]) => {
-  const meta = items.map(item => omit(item, ['content']))
+  const meta = items.map((item) => omit(item, ['content']))
   return items.map((item, i) => ({
     ...item,
-    content: jsonToFrontmatter(meta[i]) + item.content
+    content: jsonToFrontmatter(meta[i]) + item.content,
   }))
 }
 const contentDir = path.join(__dirname, '../content')
-const dirExists = async (dir = '') => !!(await fs.stat(dir).catch(e => false))
+const dirExists = async (dir = '') => !!(await fs.stat(dir).catch((e) => false))
 const mkDirIfNotExists = async (dir = '') => {
   const exists = await dirExists(dir)
   if (!exists) {
@@ -37,7 +37,7 @@ const titleToFilename = (title = '') => safeFilename(title) + '.md'
 
 const writeFiles = ({ content = [{}], folder = '' }) =>
   Promise.all(
-    content.map(async item => {
+    content.map(async (item) => {
       await mkDirIfNotExists(`${contentDir}/${folder}`)
       return fs.writeFile(
         `${contentDir}/${folder}/${titleToFilename(item.title)}`,
@@ -56,7 +56,7 @@ const writeFile = async (item = {}, folder = '') => {
 const appendComponents = (item = {}, components = ['']) => {
   return {
     ...item,
-    content: `${item.content}\n${components.join('\n')}`
+    content: `${item.content}\n${components.join('\n')}`,
   }
 }
 
@@ -65,7 +65,7 @@ const contentAPI = 'https://cms.houk.space'
 const fetchContent = async ({
   resource = '',
   components = [''],
-  readme = ''
+  readme = '',
 }) => {
   const folder = resource === 'landing' ? '' : resource
   const res = await fetch(`${contentAPI}/${resource}`)
@@ -76,7 +76,7 @@ const fetchContent = async ({
       : addFrontmatterToPage(body)
   const contentWithComponents =
     content instanceof Array
-      ? content.map(item => appendComponents(item, components))
+      ? content.map((item) => appendComponents(item, components))
       : appendComponents(content, components)
   const sortedContent =
     contentWithComponents instanceof Array
@@ -102,7 +102,7 @@ const components = {
   Disqus:
     '<Disqus shortname="houk" :identifier="$page.key" :url="`https://jt.houk.space${$page.path}`" :language="$lang" :title="$page.title"/>',
   Newsletter: '<Newsletter />',
-  Projects: '<Projects />'
+  Projects: '<Projects />',
 }
 
 const articleComponents = [components.Newsletter, components.Disqus]
@@ -111,7 +111,7 @@ const landingComponents = [components.Newsletter]
 fetchContent({ resource: 'articles', components: articleComponents })
 fetchContent({
   resource: 'projects',
-  readme: `---\nsidebar: false\n---\n${components.Projects}`
+  readme: `---\nsidebar: false\n---\n${components.Projects}`,
 })
 fetchContent({ resource: 'companies' })
 fetchContent({ resource: 'links' })
