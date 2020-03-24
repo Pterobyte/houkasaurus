@@ -5,7 +5,7 @@
       <ProjectCard
         :name="project.title"
         :url="project.frontmatter.link"
-        :imageUrl="`${$themeConfig.env.CMS_API}/${project.frontmatter.screenshots[0].url}`"
+        :imageUrl="project.frontmatter.screenshots[0].url"
       />
     </div>
   </main>

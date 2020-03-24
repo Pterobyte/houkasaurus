@@ -11,18 +11,20 @@
   title: "Site Shot"
   screenshots: 
     - 
-      id: 3
+      id: 13
       name: "Screen Shot 2020-03-24 at 9.22.17 PM.png"
-      hash: "7bf6dfa9922748f388ea455182ea244b"
+      hash: "780ce2c8a14d4c569d8dd609c96704b7"
       sha256: "RrPuo0USXosjGsPsUbzxlsQijZavkX6Vm-r7YqfdWts"
       ext: ".png"
       mime: "image/png"
       size: 35.99
-      url: "/uploads/7bf6dfa9922748f388ea455182ea244b.png"
-      provider: "local"
-      provider_metadata: null
-      created_at: "2020-03-24T13:41:01.580Z"
-      updated_at: "2020-03-24T13:41:01.580Z"
+      url: "https://res.cloudinary.com/jthouk/image/upload/v1585065824/qudzfpudoa1yn4hu05ty.png"
+      provider: "cloudinary"
+      provider_metadata: 
+        public_id: "qudzfpudoa1yn4hu05ty"
+        resource_type: "image"
+      created_at: "2020-03-24T16:03:44.272Z"
+      updated_at: "2020-03-24T16:03:44.272Z"
 
 ---
-undefined
+null

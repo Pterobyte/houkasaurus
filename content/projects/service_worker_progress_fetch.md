@@ -11,18 +11,20 @@
   title: "Service Worker Progress Fetch"
   screenshots: 
     - 
-      id: 7
-      name: "Screen Shot 2020-03-24 at 10.39.56 PM.png"
-      hash: "4e2c4cd476c24caf9f9726393d9922bf"
-      sha256: "p8AsofiSxHnwl5nQBErm3KBz_2zLBP4hvfH9bRkqqp8"
+      id: 12
+      name: "Screen Shot 2020-03-25 at 12.03.13 AM.png"
+      hash: "16084aeaa5a044d78caee184564786ec"
+      sha256: "mnWlr_p6waZ5-RVpwo8cf5syXG7ok6cH5XCr+U7lkXw"
       ext: ".png"
       mime: "image/png"
-      size: 223.88
-      url: "/uploads/4e2c4cd476c24caf9f9726393d9922bf.png"
-      provider: "local"
-      provider_metadata: null
-      created_at: "2020-03-24T14:40:27.858Z"
-      updated_at: "2020-03-24T14:40:27.858Z"
+      size: 222.73
+      url: "https://res.cloudinary.com/jthouk/image/upload/v1585065802/ytqsj2squdhlxitd9mph.png"
+      provider: "cloudinary"
+      provider_metadata: 
+        public_id: "ytqsj2squdhlxitd9mph"
+        resource_type: "image"
+      created_at: "2020-03-24T16:03:23.284Z"
+      updated_at: "2020-03-24T16:03:23.284Z"
 
 ---
-undefined
+null
