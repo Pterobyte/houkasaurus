@@ -65,3 +65,6 @@ Having a process doesn’t have to be for nerds or entrepreneurs alone. Breaking
 
 After some time you might find yourself making quite a unique collection of recipes, in which case I would love to hear about them in the comments below. Or if you liked this article and want to hear more from a guy who writes about things like this, subscribe to get updates on all my latest articles!
 
+
+<Newsletter />
+<Disqus shortname="houk" :identifier="$page.key" :url="`https://jt.houk.space${$page.path}`" :language="$lang" :title="$page.title"/>

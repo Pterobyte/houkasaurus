@@ -1,15 +1,17 @@
-const getConfig = require('vuepress-bar');
+require('dotenv-defaults').config()
+const getConfig = require('vuepress-bar')
+
 const articles = getConfig(`${__dirname}/../articles`)
 const projects = getConfig(`${__dirname}/../projects`)
 
 module.exports = {
-  'title': 'JT Houk',
-  'description': 'Entrepreneur, Writer, and Fullstack Node.js Software Developer',
-  'serviceWorker': true,
-  'ga': 'UA-146443449-1',
-  'evergreen': true,
-  'plugins': {
-    'seo': {
+  title: 'JT Houk',
+  description: 'Entrepreneur, Writer, and Fullstack Node.js Software Developer',
+  serviceWorker: true,
+  ga: process.env.GA_ID,
+  evergreen: true,
+  plugins: {
+    seo: {
       siteTitle: (_, $site) => $site.title,
       title: $page => $page.title,
       description: $page => $page.frontmatter.description,
@@ -20,80 +22,49 @@ module.exports = {
       url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
       image: ($page, $site) => $page.frontmatter.image && (($site.themeConfig.domain || '') + $page.frontmatter.image),
       publishedAt: $page => $page.frontmatter.created_at && new Date($page.frontmatter.created_at),
-      modifiedAt: $page => $page.updated_at && new Date($page.updated_at),
+      modifiedAt: $page => $page.updated_at && new Date($page.updated_at)
     }
   },
-  'head': [
-    // [
-    //   'meta',
-    //   {
-    //     'property': 'og:title',
-    //     'content': 'JT Houk'
-    //   }
-    // ],
-    // [
-    //   'meta',
-    //   {
-    //     'property': 'og:description',
-    //     'content': 'Entrepreneur, Writer, and Senior Fullstack Node.js Software Developer'
-    //   }
-    // ],
-    // [
-    //   'meta',
-    //   {
-    //     'property': 'og:image',
-    //     'content': 'https://jt.houk.space/itsme-round-200.png'
-    //   }
-    // ],
-    // [
-    //   'meta',
-    //   {
-    //     'property': 'og:type',
-    //     'content': 'website'
-    //   }
-    // ],
-    // [
-    //   'meta',
-    //   {
-    //     'property': 'og:author',
-    //     'content': 'JT Houk'
-    //   }
-    // ],
+  head: [
     [
       'link',
       {
-        'rel': 'icon',
-        'href': '/favicon.ico'
+        rel: 'icon',
+        href: '/favicon.ico'
       }
     ]
   ],
-  'themeConfig': {
-    'repo': 'HoukasaurusRex',
-    'author': 'JT Houk',
-    'domain': 'jt.houk.space',
-    'nav': [
+  themeConfig: {
+    repo: 'HoukasaurusRex',
+    author: 'JT Houk',
+    domain: 'jt.houk.space',
+    smoothScroll: true,
+    env: {
+      CMS_API: process.env.CMS_API
+    },
+    nav: [
       {
-        'text': 'Home',
-        'link': '/'
+        text: 'Home',
+        link: '/'
       },
       {
-        'text': 'Projects',
-        'link': '/projects/'
+        text: 'Projects',
+        link: '/projects/'
       },
       {
-        'text': 'Articles',
-        'link': '/articles/'
+        text: 'Articles',
+        link: `/articles/${articles.sidebar[0]}`
       },
       {
-        'text': 'About',
-        'link': '/about/'
+        text: 'About',
+        link: '/about/'
       },
       {
-        'text': 'Contact',
-        'link': 'mailto:jt@houk.space?subject=Hello%20From%20Your%20Site&body='
+        text: 'Contact',
+        link: 'mailto:jt@houk.space?subject=Hello%20From%20Your%20Site&body='
       }
     ],
-    'sidebar': {
+    sidebar: {
       '/articles/': articles.sidebar,
       '/projects/': projects.sidebar
     }

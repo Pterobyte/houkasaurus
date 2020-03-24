@@ -65,3 +65,6 @@ The commutes are over, but maybe there is still some space in your day where you
 
 The world of audio content grows every day. I’m just happy to have my small slice of happiness to look forward whenever I get a moment of respite. That being said, I’m always listening for recommendations, so if you have any, be sure to let me know!
 
+
+<Newsletter />
+<Disqus shortname="houk" :identifier="$page.key" :url="`https://jt.houk.space${$page.path}`" :language="$lang" :title="$page.title"/>

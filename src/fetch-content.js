@@ -2,23 +2,21 @@ const fs = require('fs').promises
 const path = require('path')
 const dotenv = require('dotenv-defaults')
 const fetch = require('node-fetch')
-const AbortController = require('abort-controller')
 const { omit } = require('lodash')
 const YAML = require('json2yaml')
-// const vueConfig = require('../content/.vuepress/config')
 
 dotenv.config()
 
-const jsonToFrontmatter = json => `${YAML.stringify(json)}\n---\n`
+const jsonToFrontmatter = (json = {}) => `${YAML.stringify(json)}\n---\n`
 
-const addFrontmatterToPage = item => {
+const addFrontmatterToPage = (item = {}) => {
   const meta = omit(item, ['content'])
   return {
     ...item,
     content: jsonToFrontmatter(meta) + item.content
   }
 }
-const addFrontmatterToContent = items => {
+const addFrontmatterToContent = (items = [{}]) => {
   const meta = items.map(item => omit(item, ['content']))
   return items.map((item, i) => ({
     ...item,
@@ -26,17 +24,18 @@ const addFrontmatterToContent = items => {
   }))
 }
 const contentDir = path.join(__dirname, '../content')
-const dirExists = async dir => !!(await fs.stat(dir).catch(e => false))
-const mkDirIfNotExists = async dir => {
+const dirExists = async (dir = '') => !!(await fs.stat(dir).catch(e => false))
+const mkDirIfNotExists = async (dir = '') => {
   const exists = await dirExists(dir)
   if (!exists) {
     await fs.mkdir(dir)
   }
 }
-const safeFilename = name => name.toLowerCase().replace(/[^a-z0-9]/gi, '_')
-const titleToFilename = title => safeFilename(title) + '.md'
+const safeFilename = (name = '') =>
+  name.toLowerCase().replace(/[^a-z0-9]/gi, '_')
+const titleToFilename = (title = '') => safeFilename(title) + '.md'
 
-const writeFiles = ({ content, folder }) =>
+const writeFiles = ({ content = [{}], folder = '' }) =>
   Promise.all(
     content.map(async item => {
       await mkDirIfNotExists(`${contentDir}/${folder}`)
@@ -53,44 +52,58 @@ const writeFile = async (item = {}, folder = '') => {
     item.content
   )
 }
-const handleError = (error, resource) => {
-  console.error(`Error fetching ${resource}: ${error.message}`)
-  if (process.env.DEBUG === 'true') {
-    console.error(error.stack)
+
+const appendComponents = (item = {}, components = ['']) => {
+  return {
+    ...item,
+    content: `${item.content}\n${components.join('\n')}`
   }
 }
 
 const contentAPI = 'https://cms.houk.space'
 
-const fetchContent = async (resource = '') => {
-  const controller = new AbortController()
-  const { signal, abort } = controller
-  const timeout = setTimeout(() => abort, 300)
-  try {
-    const folder = resource === 'landing' ? '' : resource
-    const res = await fetch(`${contentAPI}/${resource}`, { signal })
-    const body = await res.json()
-    const content =
-      body instanceof Array
-        ? addFrontmatterToContent(body)
-        : addFrontmatterToPage(body)
-    const files =
-      content instanceof Array
-        ? await writeFiles({ content, folder })
-        : await writeFile(content, folder)
-    console.log(
-      `Successfully wrote ${files ? files.length : 'page'} ${resource}!`
-    )
-  } catch (error) {
-    handleError(error, resource)
-  } finally {
-    clearTimeout(timeout)
-  }
+const fetchContent = async (resource = '', components = ['']) => {
+  const folder = resource === 'landing' ? '' : resource
+  const res = await fetch(`${contentAPI}/${resource}`)
+  const body = await res.json()
+  const content =
+    body instanceof Array
+      ? addFrontmatterToContent(body)
+      : addFrontmatterToPage(body)
+  const contentWithComponents =
+    content instanceof Array
+      ? content.map(item => appendComponents(item, components))
+      : appendComponents(content, components)
+  const sortedContent =
+    contentWithComponents instanceof Array
+      ? contentWithComponents.sort(
+          (a, b) => new Date(b.created_at) - new Date(a.created_at)
+        )
+      : contentWithComponents
+  const files =
+    sortedContent instanceof Array
+      ? await writeFiles({ content: sortedContent, folder })
+      : await writeFile(sortedContent, folder)
+  console.log(
+    `Successfully wrote ${files ? files.length : 'page'} ${resource}!`
+  )
+  return contentWithComponents
 }
 
-fetchContent('articles')
+const components = {
+  BuyMeACoffee: '<BuyMeACoffee />',
+  Disqus:
+    '<Disqus shortname="houk" :identifier="$page.key" :url="`https://jt.houk.space${$page.path}`" :language="$lang" :title="$page.title"/>',
+  Newsletter: '<Newsletter />',
+  Projects: '<Projects />'
+}
+
+const articleComponents = [components.Newsletter, components.Disqus]
+const landingComponents = [components.Newsletter]
+
+fetchContent('articles', articleComponents)
 fetchContent('projects')
 fetchContent('companies')
 fetchContent('links')
 fetchContent('about')
-fetchContent('landing')
+fetchContent('landing', landingComponents)
