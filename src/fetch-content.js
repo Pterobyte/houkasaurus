@@ -49,7 +49,7 @@ const writeFile = async (item = {}, folder = '') => {
   await mkDirIfNotExists(`${contentDir}/${folder}`)
   return fs.writeFile(
     `${contentDir}${folder ? '/' : ''}${folder}/README.md`,
-    item.content
+    item.content || ''
   )
 }
 
@@ -62,7 +62,11 @@ const appendComponents = (item = {}, components = ['']) => {
 
 const contentAPI = 'https://cms.houk.space'
 
-const fetchContent = async (resource = '', components = ['']) => {
+const fetchContent = async ({
+  resource = '',
+  components = [''],
+  readme = ''
+}) => {
   const folder = resource === 'landing' ? '' : resource
   const res = await fetch(`${contentAPI}/${resource}`)
   const body = await res.json()
@@ -84,8 +88,11 @@ const fetchContent = async (resource = '', components = ['']) => {
     sortedContent instanceof Array
       ? await writeFiles({ content: sortedContent, folder })
       : await writeFile(sortedContent, folder)
+  if (readme) {
+    await writeFile({ content: readme }, folder)
+  }
   console.log(
-    `Successfully wrote ${files ? files.length : 'page'} ${resource}!`
+    `Successfully wrote ${files ? files.length : 'page:'} ${resource}!`
   )
   return contentWithComponents
 }
@@ -101,9 +108,12 @@ const components = {
 const articleComponents = [components.Newsletter, components.Disqus]
 const landingComponents = [components.Newsletter]
 
-fetchContent('articles', articleComponents)
-fetchContent('projects')
-fetchContent('companies')
-fetchContent('links')
-fetchContent('about')
-fetchContent('landing', landingComponents)
+fetchContent({ resource: 'articles', components: articleComponents })
+fetchContent({
+  resource: 'projects',
+  readme: `---\nsidebar: false\n---\n${components.Projects}`
+})
+fetchContent({ resource: 'companies' })
+fetchContent({ resource: 'links' })
+fetchContent({ resource: 'about' })
+fetchContent({ resource: 'landing', components: landingComponents })
