@@ -2,51 +2,41 @@
   "name": "houkasaurus",
   "version": "1.0.0",
   "description": "Personal blog for JT Houk",
-  "main": "index.js",
   "scripts": {
     "dev:content": "vuepress dev content",
     "build:content": "vuepress build content/",
     "fetch:content": "node src/fetch-content.js",
-    "deploy:content": "bash deploy.sh",
     "lint:staged": "eslint --quiet --fix",
     "test": "echo 'No tests specified'"
   },
-  "dependencies": {
-    "abort-controller": "^3.0.0",
-    "dotenv-defaults": "^1.0.2",
-    "dropbox-paper-cms": "^1.0.16",
-    "idb": "^4.0.4",
+  "devDependencies": {
+    "dotenv-defaults": "^1.1.1",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
     "json2yaml": "^1.1.0",
     "lodash": "^4.17.15",
-    "markdown-it-for-inline": "^0.1.1",
-    "markdown-it-front-matter": "^0.1.2",
-    "vue-disqus": "^3.0.5",
-    "vuepress-bar": "^0.2.3"
-  },
-  "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^4.3.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "node-sass": "^4.12.0",
-    "prettier": "^1.18.0",
-    "sass-loader": "^7.1.0",
-    "stylelint": "^10.1.0",
+    "node-sass": "^4.13.1",
+    "prettier": "^2.0.2",
+    "sass-loader": "^8.0.2",
+    "stylelint": "^13.2.1",
     "vuepress": "^1.4.0",
+    "vuepress-bar": "^0.2.4",
     "vuepress-plugin-seo": "^0.1.2"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HoukasaurusRex/houkasaurus.git"
+    "url": "git+https://github.com/HoukasaurusRex/jt.houk.space.git"
   },
   "keywords": [
     "blog",
     "vuepress",
     "cms"
   ],
-  "author": "JT Houk <jt1992@gmail.com> (https://www.jt-houk.com/)",
+  "author": "JT Houk <jt@houk.space> (https://jt.houk.space/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HoukasaurusRex/houkasaurus/issues"
+    "url": "https://github.com/HoukasaurusRex/jt.houk.space/issues"
   },
-  "homepage": "https://github.com/HoukasaurusRex/houkasaurus#readme"
+  "homepage": "https://github.com/HoukasaurusRex/jt.houk.space#readme"
 }
