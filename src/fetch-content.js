@@ -24,7 +24,7 @@ const addFrontmatterToContent = (items = [{}]) => {
   }))
 }
 const contentDir = path.join(__dirname, '../content')
-const dirExists = async (dir = '') => !!(await fs.stat(dir).catch((e) => false))
+const dirExists = async (dir = '') => !!(await fs.stat(dir).catch((_) => false))
 const mkDirIfNotExists = async (dir = '') => {
   const exists = await dirExists(dir)
   if (!exists) {
@@ -35,16 +35,17 @@ const safeFilename = (name = '') =>
   name.toLowerCase().replace(/[^a-z0-9]/gi, '_')
 const titleToFilename = (title = '') => safeFilename(title) + '.md'
 
-const writeFiles = ({ content = [{}], folder = '' }) =>
-  Promise.all(
+const writeFiles = async ({ content = [{}], folder = '' }) => {
+  await mkDirIfNotExists(`${contentDir}/${folder}`)
+  return Promise.all(
     content.map(async (item) => {
-      await mkDirIfNotExists(`${contentDir}/${folder}`)
       return fs.writeFile(
         `${contentDir}/${folder}/${titleToFilename(item.title)}`,
         item.content
       )
     })
   )
+}
 const writeFile = async (item = {}, folder = '') => {
   await mkDirIfNotExists(`${contentDir}/${folder}`)
   return fs.writeFile(
