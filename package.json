@@ -16,6 +16,7 @@
     "node-fetch": "^2.6.0",
     "vuepress": "^1.4.0",
     "vuepress-bar": "^0.2.4",
+    "vuepress-plugin-mailchimp": "^1.4.1",
     "vuepress-plugin-seo": "^0.1.2"
   },
   "devDependencies": {

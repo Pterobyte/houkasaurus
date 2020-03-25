@@ -23,6 +23,11 @@ module.exports = {
       image: ($page, $site) => $page.frontmatter.image && (($site.themeConfig.domain || '') + $page.frontmatter.image),
       publishedAt: $page => $page.frontmatter.created_at && new Date($page.frontmatter.created_at),
       modifiedAt: $page => $page.updated_at && new Date($page.updated_at)
+    },
+    'vuepress-plugin-mailchimp': {
+      // You need to provide this plugin with your Mailchimp endpoint in order for it
+      // to know where to save the email address. See more detail in Config section.
+      endpoint: process.env.MC_API
     }
   },
   head: [
