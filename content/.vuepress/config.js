@@ -25,9 +25,14 @@ module.exports = {
       modifiedAt: $page => $page.updated_at && new Date($page.updated_at)
     },
     'vuepress-plugin-mailchimp': {
-      // You need to provide this plugin with your Mailchimp endpoint in order for it
-      // to know where to save the email address. See more detail in Config section.
-      endpoint: process.env.MC_API
+      endpoint: process.env.MC_API,
+      title: 'Subscribe',
+      content: 'Get my latest posts. No spam.',
+      submitText: 'Subscribe',
+      popupConfig: {
+        enabled: popupEnabled = true,
+        timeout: popupTimeout = 4000
+      }
     }
   },
   head: [
