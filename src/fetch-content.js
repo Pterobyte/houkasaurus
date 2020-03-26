@@ -100,13 +100,12 @@ const fetchContent = async ({
 
 const components = {
   BuyMeACoffee: '<BuyMeACoffee />',
-  Disqus:
-    '<Disqus shortname="houk" :identifier="$page.key" :url="`https://jt.houk.space${$page.path}`" :language="$lang" :title="$page.title"/>',
+  Comments: '<Comments />',
   Newsletter: '<Newsletter />',
   Projects: '<Projects />',
 }
 
-const articleComponents = [components.Newsletter, components.Disqus]
+const articleComponents = [components.Newsletter, components.Comments]
 const landingComponents = [components.Newsletter]
 
 try {
