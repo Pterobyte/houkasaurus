@@ -23,6 +23,16 @@ module.exports = {
       image: ($page, $site) => $page.frontmatter.image && (($site.themeConfig.domain || '') + $page.frontmatter.image),
       publishedAt: $page => $page.frontmatter.created_at && new Date($page.frontmatter.created_at),
       modifiedAt: $page => $page.updated_at && new Date($page.updated_at)
+    },
+    'vuepress-plugin-mailchimp': {
+      endpoint: process.env.MC_API,
+      title: 'Subscribe',
+      content: 'Get my latest posts. No spam.',
+      submitText: 'Subscribe',
+      popupConfig: {
+        enabled: popupEnabled = true,
+        timeout: popupTimeout = 4000
+      }
     }
   },
   head: [
