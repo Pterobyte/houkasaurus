@@ -50,7 +50,8 @@ module.exports = {
     domain: 'jt.houk.space',
     smoothScroll: true,
     env: {
-      CMS_API: process.env.CMS_API
+      CMS_API: process.env.CMS_API,
+      DISQUS_API_KEY: process.env.DISQUS_API_KEY
     },
     nav: [
       {
