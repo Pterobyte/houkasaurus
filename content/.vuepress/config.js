@@ -3,6 +3,7 @@ const getConfig = require('vuepress-bar')
 
 const articles = getConfig(`${__dirname}/../articles`)
 const projects = getConfig(`${__dirname}/../projects`)
+projects.sidebar[0] = ['/projects/', '<- Back to Projects']
 
 module.exports = {
   title: 'JT Houk',

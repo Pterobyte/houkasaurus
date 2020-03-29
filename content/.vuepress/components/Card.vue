@@ -1,14 +1,14 @@
 <template>
-  <a :href="url" target="_blank">
+  <router-link :to="url" >
     <section>
       <header>{{name}}</header>
       <div class="card" :style="backgroundImageStyle"></div>
     </section>
-  </a>
+  </router-link>
 </template>
 <script>
 export default {
-  name: 'ProjectCard',
+  name: 'Card',
   props: {
     name: {
       type: String,

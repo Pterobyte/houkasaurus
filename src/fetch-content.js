@@ -102,7 +102,7 @@ const components = {
   BuyMeACoffee: '<BuyMeACoffee />',
   Comments: '<Comments />',
   Newsletter: '<Newsletter />',
-  Projects: '<Projects />',
+  Cards: '<Cards />',
 }
 
 const articleComponents = [components.Newsletter, components.Comments]
@@ -112,7 +112,7 @@ try {
   fetchContent({ resource: 'articles', components: articleComponents })
   fetchContent({
     resource: 'projects',
-    readme: `---\nsidebar: false\n---\n${components.Projects}`,
+    readme: `---\nsidebar: false\n---\n${components.Cards}`,
   })
   fetchContent({ resource: 'companies' })
   fetchContent({ resource: 'links' })
