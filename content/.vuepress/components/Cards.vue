@@ -1,24 +1,24 @@
 <template>
-  <main class="projects">
+  <main class="cards">
     <slot name="top"/>
-    <div v-for="(project, index) in projects">
-      <ProjectCard
-        :name="project.title"
-        :url="project.frontmatter.link"
-        :imageUrl="project.frontmatter.screenshots[0].url"
+    <div v-for="(page, index) in pages">
+      <Card
+        :name="page.title"
+        :url="page.path"
+        :imageUrl="page.frontmatter.screenshots[0].url"
       />
     </div>
   </main>
 </template>
 
 <script>
-import ProjectCard from './ProjectCard.vue'
+import Card from './Card.vue'
 
 export default {
-  name: 'Projects',
-  components: { ProjectCard },
+  name: 'Cards',
+  components: { Card },
   computed: {
-    projects() {
+    pages() {
       return this.$site.pages
         .filter(page => page.path.includes(this.$page.path))
         .filter(page => page.title)
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.projects
+.cards
   display grid
   grid-template-columns repeat(auto-fill, minmax(calc(40vw),1fr))
   grid-auto-rows: auto
