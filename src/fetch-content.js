@@ -1,11 +1,8 @@
 const fs = require('fs').promises
 const path = require('path')
-const dotenv = require('dotenv-defaults')
 const fetch = require('node-fetch')
 const { omit } = require('lodash')
 const YAML = require('json2yaml')
-
-dotenv.config()
 
 const jsonToFrontmatter = (json = {}) => `${YAML.stringify(json)}\n---\n`
 
@@ -25,12 +22,8 @@ const addFrontmatterToContent = (items = [{}]) => {
 }
 const contentDir = path.join(__dirname, '../content')
 const dirExists = async (dir = '') => !!(await fs.stat(dir).catch((_) => false))
-const mkDirIfNotExists = async (dir = '') => {
-  const exists = await dirExists(dir)
-  if (!exists) {
-    await fs.mkdir(dir)
-  }
-}
+const mkDirIfNotExists = async (dir = '') =>
+  (await dirExists(dir)) || (await fs.mkdir(dir))
 const safeFilename = (name = '') =>
   name.toLowerCase().replace(/[^a-z0-9]/gi, '_')
 const titleToFilename = (title = '') => safeFilename(title) + '.md'
@@ -61,15 +54,26 @@ const appendComponents = (item = {}, components = ['']) => {
   }
 }
 
-const contentAPI = 'https://cms.houk.space'
-
-const fetchContent = async ({
-  resource = '',
-  components = [''],
-  readme = '',
-}) => {
-  const folder = resource === 'landing' ? '' : resource
-  const res = await fetch(`${contentAPI}/${resource}`)
+/**
+ *
+ * @param {string} contentAPI - API to fetch content from (e.g. 'https://api.mysite.com')
+ * @param {string} resource - resource name to fetch (e.g. 'articles')
+ * @param {{ components?:[''], readme?:'', landing?:'landing', path?: '/' }} config - optional configurations
+ */
+const fetchContent = async (contentAPI, resource, config = {}) => {
+  if (!contentAPI) {
+    throw new Error('contentAPI is required')
+  } else if (!resource) {
+    throw new Error('resource is required')
+  }
+  const {
+    components = [''],
+    readme = '',
+    landing = 'landing',
+    path = '/',
+  } = config
+  const folder = resource === landing ? '' : resource
+  const res = await fetch(`${contentAPI}${path}${resource}`)
   const body = await res.json()
   const content =
     body instanceof Array
@@ -98,27 +102,4 @@ const fetchContent = async ({
   return contentWithComponents
 }
 
-const components = {
-  BuyMeACoffee: '<BuyMeACoffee />',
-  Comments: '<Comments />',
-  Newsletter: '<Newsletter />',
-  Cards: '<Cards />',
-}
-
-const articleComponents = [components.Newsletter, components.Comments]
-const landingComponents = [components.Newsletter]
-
-try {
-  fetchContent({ resource: 'articles', components: articleComponents })
-  fetchContent({
-    resource: 'projects',
-    readme: `---\nsidebar: false\n---\n${components.Cards}`,
-  })
-  fetchContent({ resource: 'companies' })
-  fetchContent({ resource: 'links' })
-  fetchContent({ resource: 'about' })
-  fetchContent({ resource: 'landing', components: landingComponents })
-} catch (error) {
-  console.error(error)
-  process.exit(1)
-}
+module.exports = fetchContent

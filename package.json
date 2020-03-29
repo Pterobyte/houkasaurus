@@ -5,7 +5,7 @@
   "scripts": {
     "dev:content": "vuepress dev content",
     "build:content": "vuepress build content/",
-    "fetch:content": "node src/fetch-content.js",
+    "fetch:content": "node index.js",
     "lint:staged": "eslint --quiet --fix",
     "test": "echo 'No tests specified'"
   },
