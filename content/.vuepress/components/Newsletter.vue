@@ -11,7 +11,7 @@
             <input checked type="checkbox" value="group[177126][1]" v-model="interests" id="lifestyle"><label for="lifestyle">Lifestyle</label>
           </li>
           <li class="interest">
-            <input checked type="checkbox" value="group[177126][4]" v-model="interests" id="china"><label for="china">China</label>
+            <input checked type="checkbox" value="group[177126][4]" v-model="interests" id="startups"><label for="startups">Startups</label>
           </li>
         </ul>
         <input
@@ -76,18 +76,18 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-.newsletter__wrap
+<style lang="stylus" scoped>
+/deep/ .newsletter__wrap
   background-color var(--bg-color)
   color var(--text-color)
   border 1px solid var(--border-color)
-.newsletter__button
-  background-color hsl(0, 60%, 45%)
-.newsletter__interests
-  display flex
-  list-style none
-  padding-left 0
-  justify-content center
-  .interest
-    margin-right 1rem
+  .newsletter__button
+    background-color hsl(0, 60%, 45%)
+  .newsletter__interests
+    display flex
+    list-style none
+    padding-left 0
+    justify-content center
+    .interest
+      margin-right 1rem
 </style>

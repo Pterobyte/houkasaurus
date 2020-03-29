@@ -6,8 +6,8 @@ const projects = getConfig(`${__dirname}/../projects`)
 projects.sidebar[0] = ['/projects/', '<- Back to Projects']
 
 module.exports = {
-  title: 'JT Houk',
-  description: 'Entrepreneur, Writer, and Fullstack Node.js Software Developer',
+  title: 'JT\'s Space',
+  description: 'Entrepreneur, Writer, Fullstack Developer',
   serviceWorker: true,
   ga: process.env.GA_ID,
   evergreen: true,
