@@ -1,11 +1,11 @@
 {
-  "name": "houkasaurus",
+  "name": "jt.houk.space",
   "version": "1.0.0",
   "description": "Personal blog for JT Houk",
   "scripts": {
     "dev:content": "vuepress dev content",
     "build:content": "vuepress build content/",
-    "fetch:content": "node src/fetch-content.js",
+    "fetch:content": "node index.js",
     "lint:staged": "eslint --quiet --fix",
     "test": "echo 'No tests specified'"
   },
