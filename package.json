@@ -4,7 +4,7 @@
   "description": "Personal blog for JT Houk",
   "scripts": {
     "dev:content": "vuepress dev content",
-    "build:content": "npm rebuild node-sass && vuepress build content/",
+    "build:content": "vuepress build content/",
     "fetch:content": "node index.js",
     "lint:staged": "eslint --quiet --fix",
     "test": "echo 'No tests specified'"
