@@ -115,8 +115,8 @@ module.exports = {
         },
       }
     ],
-    // feed: {
-    //   canonical_base:'htts://jt.houk.space'
-    // }
+    feed: {
+      canonical_base:'https://jt.houk.space'
+    }
   }
 }
