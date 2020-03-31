@@ -1,3 +1,7 @@
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
 #vuepress-theme-blog__global-layout {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -27,6 +31,22 @@
   .content-wrapper {
     .ui-post-summary {
       color: var(--text-color);
+    }
+    .ui-post-meta {
+      color: var(--text-color);
+    }
+    .post-tag {
+      background-color: var(--background-color);
+      &:hover {
+        background-color: var(--accent-color);
+        &::after {
+          border-left: 10px solid var(--accent-color);
+        }
+      }
+      &::after {
+        border-left: 10px solid var(--background-color);
+        background: var(--foreground-color);
+      }
     }
     .pagination {
       a {
