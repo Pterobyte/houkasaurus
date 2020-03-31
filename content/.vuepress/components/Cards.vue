@@ -27,11 +27,11 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-.cards
-  display grid
-  grid-template-columns repeat(auto-fill, minmax(calc(40vw),1fr))
-  grid-auto-rows: auto
-  grid-gap 2rem
-  padding 8rem 3rem
+<style lang="scss" scoped>
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(40vw),1fr));
+  grid-auto-rows: auto;
+  grid-gap: 2rem;
+}
 </style>

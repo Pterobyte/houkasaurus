@@ -1,8 +1,8 @@
 <template>
-  <router-link :to="url" >
+  <router-link class="card" :to="url" >
     <section>
-      <header>{{name}}</header>
-      <div class="card" :style="backgroundImageStyle"></div>
+      <header><h2 class="card__title">{{name}}</h2></header>
+      <div class="card__content" :style="backgroundImageStyle"></div>
     </section>
   </router-link>
 </template>
@@ -30,21 +30,29 @@ export default {
   },
 }
 </script>
-<style lang="stylus" scoped>
+<style lang="scss" scoped>
 
-.card
-  --image-url ''
-  background-image var(--image-url)
-  background-size cover
-  filter blur(2px) opacity(50%)
-  transition all 0.2s ease-in-out
-  border 1px solid var(--border-color)
-  border-radius 4px
-  height 12rem
-  text-align center
+.card {
+  text-decoration: none !important;
+}
 
-  &:hover
-    filter blur(0) opacity(100%)
-a
-  color var(--text-color)
+.card__content {
+  --image-url: '';
+  background-image: var(--image-url);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-size 0.2s ease-in-out;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  height: 12rem;
+  text-align: center;
+
+  &:hover {
+    background-size: 90%;
+  }
+  a {
+    color: var(--text-color);
+  }
+}
 </style>

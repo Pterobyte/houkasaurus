@@ -7,10 +7,11 @@ const components = {
   Comments: '<Comments />',
   Newsletter: '<Newsletter />',
   Cards: '<Cards />',
+  Landing: '<Landing><Newsletter /></Landing>',
 }
 
 const articleComponents = [components.Newsletter, components.Comments]
-const landingComponents = [components.Newsletter]
+const landingComponents = [components.Landing]
 
 const fetchAllContent = () =>
   Promise.all([

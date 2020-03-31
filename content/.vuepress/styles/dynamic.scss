@@ -1,0 +1,32 @@
+:root {
+  --primary-color: hsl(327, 76%, 64%);
+  --accent-color: #d05dd2;
+  --background-color: #eee;
+  --foreground-color: #efefef;
+  --btn-color-primary: $btnColorPrimary;
+  --btn-color-secondary: $btnColorSecondary;
+  --border-color: $borderColor;
+  --text-color: $textColor;
+  --darken-text-color: $darkTextColor;
+  --shadow-color: $shadowColor;
+  --shadow-mid-color: lighten($shadowColor, 10%);
+  --box-shadow-back: 0px 1px 1px $shadowColor;
+  --box-shadow-mid: 0px 1px 1.5px 1.5px lighten($shadowColor, 5%);
+  --button-text-color: #fff;
+}
+
+// Dark theme colors
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #2a2a2b;
+    --foreground-color: #313238;
+    --btn-color-secondary: darken($btnColorSecondary, 70%);
+    --border-color: darken($borderColor, 50%);
+    --text-color: #eee;
+    --darken-text-color: #eaecef;
+    --shadow-color: darken($shadowColor, 20%);
+    --shadow-mid-color: darken($shadowColor, 10%);
+    --box-shadow-back: 0px 1px 1px darken($shadowColor, 80%);
+    --box-shadow-mid: 0px 1px 1.5px 1.5px darken($shadowColor, 75%);
+  }
+}

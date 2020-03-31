@@ -6,8 +6,8 @@ const projects = getConfig(`${__dirname}/../projects`)
 projects.sidebar[0] = ['/projects/', '<- Back to Projects']
 
 module.exports = {
-  title: 'JT Houk',
-  description: 'Entrepreneur, Writer, and Fullstack Node.js Software Developer',
+  title: 'JT\'s Space',
+  description: 'Entrepreneur, Writer, and Fullstack Node.js Developer',
   serviceWorker: true,
   ga: process.env.GA_ID,
   evergreen: true,
@@ -45,10 +45,12 @@ module.exports = {
       }
     ]
   ],
+  theme: '@vuepress/theme-blog',
   themeConfig: {
     repo: 'HoukasaurusRex',
     author: 'JT Houk',
     domain: 'jt.houk.space',
+    hostname: 'https://jt.houk.space',
     smoothScroll: true,
     env: {
       CMS_API: process.env.CMS_API,
@@ -65,20 +67,56 @@ module.exports = {
       },
       {
         text: 'Articles',
-        link: `/articles/${articles.sidebar[0]}`
+        link: '/articles/'
       },
       {
         text: 'About',
         link: '/about/'
       },
       {
-        text: 'Contact',
+        text: 'Get In Touch',
         link: 'mailto:jt@houk.space?subject=Hello%20From%20Your%20Site&body='
       }
     ],
     sidebar: {
       '/articles/': articles.sidebar,
       '/projects/': projects.sidebar
-    }
+    },
+    footer: {
+      contact: [
+        {
+          type: 'github',
+          link: 'https://github.com/HoukasaurusRex',
+        },
+        {
+          type: 'twitter',
+          link: 'https://twitter.com/HoukasaurusRex',
+        },
+        {
+          type: 'linkedin',
+          link: 'https://linkedin.com/in/jt-houk'
+        },
+        {
+          type: 'mail',
+          link: 'mailto:jt@houk.space?subject=Hello%20From%20Your%20Site&body='
+        }
+      ],
+    },
+    directories: [
+      {
+        id: 'articles', // Unique id for current classifier
+        dirname: 'articles', // Matched directory name
+        path: '/articles/', // Entry page for current classifier
+        title: 'Articles', // Entry and pagination page titles for current classifier
+        itemLayout: 'Writing', // Layout for matched pages.
+        itemPermalink: '/articles/:slug', // Permalink for matched pages.
+        pagination: { // Pagination behavior
+          lengthPerPage: 5,
+        },
+      }
+    ],
+    // feed: {
+    //   canonical_base:'htts://jt.houk.space'
+    // }
   }
 }
