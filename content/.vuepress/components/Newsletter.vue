@@ -77,24 +77,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/deep/ .newsletter__wrap {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
-  .newsletter__input {
-    margin: 0;
-  }
-  .newsletter__interests {
-    display: flex;
-    list-style: none;
-    padding-left: 0;
-    justify-content: center;
-    .interest {
-      margin-right: 1rem;
+.newsletter {
+  /deep/ .newsletter__wrap {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    .newsletter__input {
+      margin: 0;
     }
-  }
-  .newsletter__button {
-    background-color: var(--primary-color);
+    .newsletter__interests {
+      display: flex;
+      list-style: none;
+      padding-left: 0;
+      justify-content: center;
+      .interest {
+        margin-right: 1rem;
+      }
+    }
+    .newsletter__button {
+      background-color: var(--primary-color);
+    }
   }
 }
 </style>
