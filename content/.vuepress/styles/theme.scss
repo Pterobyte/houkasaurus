@@ -1,0 +1,59 @@
+#vuepress-theme-blog__global-layout {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  #header,
+  .mobile-header-bar,
+  .mobile-menu-wrapper {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    .mobile-home-link {
+      color: var(--text-color);
+    }
+    .nav {
+      a:hover {
+        border-bottom: 2px solid var(--accent-color);
+      }
+    }
+    .search-box {
+      .suggestions {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        .focused {
+          background-color: var(--foreground-color);
+        }
+      }
+    }
+  }
+  .content-wrapper {
+    .ui-post-summary {
+      color: var(--text-color);
+    }
+    .pagination {
+      a {
+        background-color: var(--foreground-color);
+      }
+      .active {
+        a {
+          background-color: var(--accent-color);
+        }
+      }
+    }
+  }
+  .vuepress-blog-theme-content {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+}
+
+@media (min-width: 957px) {
+  #vuepress-theme-blog__global-layout {
+    .vuepress-blog-theme-content {
+      background-color: var(--foreground-color);
+      border-radius: 5px;
+    }
+  }
+}

@@ -1,19 +1,8 @@
 <template>
     <SimpleNewsletter v-slot="{ slotProps }">
       <div class="newsletter__wrap">
-        <div class="newsletter__title">{{ slotProps.title }}</div>
-        <div class="newsletter__content">{{ slotProps.content }}</div>
-        <ul class="newsletter__interests">
-          <li class="interest">
-            <input checked type="checkbox" value="group[177126][2]" v-model="interests" id="coding"><label  for="coding">Coding</label>
-          </li>
-          <li class="interest">
-            <input checked type="checkbox" value="group[177126][1]" v-model="interests" id="lifestyle"><label for="lifestyle">Lifestyle</label>
-          </li>
-          <li class="interest">
-            <input checked type="checkbox" value="group[177126][4]" v-model="interests" id="startups"><label for="startups">Startups</label>
-          </li>
-        </ul>
+        <!-- <div class="newsletter__title">{{ slotProps.title }}</div>
+        <div class="newsletter__content">{{ slotProps.content }}</div> -->
         <input
           v-model="mail"
           class="newsletter__input"
@@ -26,6 +15,17 @@
           autocorrect="off"
           data-cy="email"
         />
+        <ul class="newsletter__interests">
+          <li class="interest">
+            <input checked type="checkbox" value="group[177126][2]" v-model="interests" id="coding"><label  for="coding">Coding</label>
+          </li>
+          <li class="interest">
+            <input checked type="checkbox" value="group[177126][1]" v-model="interests" id="lifestyle"><label for="lifestyle">Lifestyle</label>
+          </li>
+          <li class="interest">
+            <input checked type="checkbox" value="group[177126][4]" v-model="interests" id="startups"><label for="startups">Startups</label>
+          </li>
+        </ul>
         <button @click.prevent="onSubmit" type="submit" class="newsletter__button" data-cy="submit">
           {{ slotProps.submitText }}
         </button>
@@ -76,18 +76,25 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-/deep/ .newsletter__wrap
-  background-color var(--bg-color)
-  color var(--text-color)
-  border 1px solid var(--border-color)
-  .newsletter__button
-    background-color hsl(0, 60%, 45%)
-  .newsletter__interests
-    display flex
-    list-style none
-    padding-left 0
-    justify-content center
-    .interest
-      margin-right 1rem
+<style lang="scss" scoped>
+/deep/ .newsletter__wrap {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  .newsletter__input {
+    margin: 0;
+  }
+  .newsletter__interests {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    justify-content: center;
+    .interest {
+      margin-right: 1rem;
+    }
+  }
+  .newsletter__button {
+    background-color: var(--primary-color);
+  }
+}
 </style>

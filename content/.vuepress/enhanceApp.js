@@ -1,3 +1,4 @@
+import './styles/index.scss'
 import VueDisqus from 'vue-disqus'
 
 export default ({

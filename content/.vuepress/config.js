@@ -7,7 +7,7 @@ projects.sidebar[0] = ['/projects/', '<- Back to Projects']
 
 module.exports = {
   title: 'JT\'s Space',
-  description: 'Entrepreneur, Writer, Fullstack Developer',
+  description: 'Entrepreneur, Writer, and Fullstack Node.js Developer',
   serviceWorker: true,
   ga: process.env.GA_ID,
   evergreen: true,
@@ -45,6 +45,7 @@ module.exports = {
       }
     ]
   ],
+  theme: '@vuepress/theme-blog',
   themeConfig: {
     repo: 'HoukasaurusRex',
     author: 'JT Houk',
@@ -65,20 +66,36 @@ module.exports = {
       },
       {
         text: 'Articles',
-        link: `/articles/${articles.sidebar[0]}`
+        link: '/articles/'
       },
       {
         text: 'About',
         link: '/about/'
       },
       {
-        text: 'Contact',
+        text: 'Get In Touch',
         link: 'mailto:jt@houk.space?subject=Hello%20From%20Your%20Site&body='
       }
     ],
     sidebar: {
       '/articles/': articles.sidebar,
       '/projects/': projects.sidebar
+    },
+    directories: [
+      {
+        id: 'articles', // Unique id for current classifier
+        dirname: 'articles', // Matched directory name
+        path: '/articles/', // Entry page for current classifier
+        title: 'Articles', // Entry and pagination page titles for current classifier
+        itemLayout: 'Writing', // Layout for matched pages.
+        itemPermalink: '/articles/:slug', // Permalink for matched pages.
+        pagination: { // Pagination behavior
+          lengthPerPage: 2,
+        },
+      }
+    ],
+    feed: {
+      canonical_base:'htts://jt.houk.space'
     }
   }
 }
