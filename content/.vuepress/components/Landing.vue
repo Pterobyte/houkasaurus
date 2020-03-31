@@ -22,7 +22,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .landing {
   margin: 0 auto;
@@ -36,12 +36,5 @@ export default {
     top: 40%;
     right: 10rem;
   }
-//   .content-wrapper {
-//     max-width: 1200px;
-//   }
-//   .landing {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr 1fr;
-//   }
 }
 </style>

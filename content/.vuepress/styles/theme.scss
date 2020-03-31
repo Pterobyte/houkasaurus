@@ -3,7 +3,7 @@ body {
   color: var(--text-color);
 }
 #vuepress-theme-blog__global-layout {
-  background-color: var(--background-color);
+  background-color: var(--foreground-color);
   color: var(--text-color);
   #header,
   .mobile-header-bar,
@@ -60,7 +60,8 @@ body {
     }
   }
   .vuepress-blog-theme-content {
-    background-color: var(--background-color);
+    background-color: var(--foreground-color);
+    border-radius: 5px;
     color: var(--text-color);
   }
   a {
@@ -71,9 +72,6 @@ body {
 
 @media (min-width: 957px) {
   #vuepress-theme-blog__global-layout {
-    .vuepress-blog-theme-content {
-      background-color: var(--foreground-color);
-      border-radius: 5px;
-    }
+    background-color: var(--background-color);
   }
 }

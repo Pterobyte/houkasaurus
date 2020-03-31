@@ -50,6 +50,7 @@ module.exports = {
     repo: 'HoukasaurusRex',
     author: 'JT Houk',
     domain: 'jt.houk.space',
+    hostname: 'https://jt.houk.space',
     smoothScroll: true,
     env: {
       CMS_API: process.env.CMS_API,
@@ -81,6 +82,26 @@ module.exports = {
       '/articles/': articles.sidebar,
       '/projects/': projects.sidebar
     },
+    footer: {
+      contact: [
+        {
+          type: 'github',
+          link: 'https://github.com/HoukasaurusRex',
+        },
+        {
+          type: 'twitter',
+          link: 'https://twitter.com/HoukasaurusRex',
+        },
+        {
+          type: 'linkedin',
+          link: 'https://linkedin.com/in/jt-houk'
+        },
+        {
+          type: 'mail',
+          link: 'mailto:jt@houk.space?subject=Hello%20From%20Your%20Site&body='
+        }
+      ],
+    },
     directories: [
       {
         id: 'articles', // Unique id for current classifier
@@ -90,7 +111,7 @@ module.exports = {
         itemLayout: 'Writing', // Layout for matched pages.
         itemPermalink: '/articles/:slug', // Permalink for matched pages.
         pagination: { // Pagination behavior
-          lengthPerPage: 2,
+          lengthPerPage: 5,
         },
       }
     ],
