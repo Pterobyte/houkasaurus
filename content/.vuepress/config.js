@@ -58,16 +58,12 @@ module.exports = {
     },
     nav: [
       {
-        text: 'Home',
-        link: '/'
+        text: 'Articles',
+        link: '/articles/'
       },
       {
         text: 'Projects',
         link: '/projects/'
-      },
-      {
-        text: 'Articles',
-        link: '/articles/'
       },
       {
         text: 'About',
