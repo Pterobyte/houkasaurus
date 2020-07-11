@@ -23,7 +23,7 @@ body {
       .suggestions {
         background-color: var(--background-color);
         color: var(--text-color);
-        .focused {
+        .suggestion .focused {
           background-color: var(--foreground-color);
         }
       }
