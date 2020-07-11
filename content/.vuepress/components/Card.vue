@@ -41,11 +41,13 @@ export default {
   background-image: var(--image-url);
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top, center;
   transition: all 0.1s ease-in-out;
   border: 1px solid var(--border-color);
   border-radius: 4px;
   height: 12rem;
+  // max-width: 15rem;
+  // min-width: 10rem;
   text-align: center;
   box-shadow: 0 1px 2px rgba(0,0,0,0.15);
 
