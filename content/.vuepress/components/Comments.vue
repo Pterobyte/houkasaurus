@@ -1,5 +1,5 @@
 <template>
-  <VueDisqus :shortname="shortname" :identifier="identifier" :url="url" :language="language" :title="title" />
+  <Disqus :shortname="shortname" :identifier="identifier" :url="url" :language="language" :title="title" />
 </template>
 
 <script>
