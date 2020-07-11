@@ -22,6 +22,7 @@ export default {
       return this.$site.pages
         .filter(page => page.path.includes(this.$page.path))
         .filter(page => page.title)
+        .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
     }
   }
 }

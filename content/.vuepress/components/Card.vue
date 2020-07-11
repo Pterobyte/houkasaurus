@@ -42,14 +42,17 @@ export default {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  transition: background-size 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
   border: 1px solid var(--border-color);
   border-radius: 4px;
   height: 12rem;
   text-align: center;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
 
   &:hover {
-    background-size: 90%;
+    transform: translateY(-3px);
+    transform: scale(1.01);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
   }
   a {
     color: var(--text-color);
