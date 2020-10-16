@@ -1,5 +1,5 @@
 require('dotenv-defaults').config()
-const fetchContent = require('./src/fetch-content')
+const { fetchToMarkdown } = require('fetch-to-markdown')
 
 const contentAPI = process.env.CMS_API
 
@@ -15,14 +15,16 @@ const landingComponents = [components.Landing]
 
 const fetchAllContent = () =>
   Promise.all([
-    fetchContent(contentAPI, 'articles', { components: articleComponents }),
-    fetchContent(contentAPI, 'projects', {
+    fetchToMarkdown(contentAPI, 'articles', {
+      components: articleComponents,
+    }),
+    fetchToMarkdown(contentAPI, 'projects', {
       readme: `---\nsidebar: false\n---\n${components.Cards}`,
     }),
-    fetchContent(contentAPI, 'companies'),
-    fetchContent(contentAPI, 'links'),
-    fetchContent(contentAPI, 'about'),
-    fetchContent(contentAPI, 'landing', {
+    fetchToMarkdown(contentAPI, 'companies'),
+    fetchToMarkdown(contentAPI, 'links'),
+    fetchToMarkdown(contentAPI, 'about'),
+    fetchToMarkdown(contentAPI, 'landing', {
       components: landingComponents,
     }),
   ])

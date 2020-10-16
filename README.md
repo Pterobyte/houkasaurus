@@ -71,7 +71,7 @@ npm install yarn@latest -g
 yarn install
 
 # Fetch content from CMS backend
-yarn fetch:content
+yarn fetch
 
 # Run local dev server
 yarn dev
@@ -83,8 +83,6 @@ yarn dev
 
 * Twitter: [@HoukasaurusRex][twitter-url]
 * Github: [@HoukasaurusRex][github-url]
-
-<a href="https://www.buymeacoffee.com/HoukasaurusRex" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-red.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
 
 ## 🤝 Contributing
 
@@ -102,6 +100,16 @@ Check out the [issues page][issues-url]
 ## 🗺 Roadmap
 
 See the [open issues][issues-url] for a list of proposed features (and known issues)
+
+### TODO
+
+* [ ] Social media tracker
+* [ ] Page transitions
+* [ ] Update README to template
+* [ ] Webmentions twitter hooks
+* [ ] RSS feed
+* [ ] Interactive skill tree
+* [ ] Automate readme publish
 
 <!-- DEPENDENCIES -->
 ## 📦 Dependencies
