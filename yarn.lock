@@ -4030,10 +4030,10 @@ feed@2.0.4:
     luxon "^1.3.3"
     xml "^1.0.1"
 
-fetch-to-markdown@^1.1.9:
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/fetch-to-markdown/-/fetch-to-markdown-1.1.9.tgz#fc1476fcf0ab82378bdd4bc25a67711b2ea2a713"
-  integrity sha512-9c0mj3K96Twnmjpt/NsivTC/yq23k3FtKuR1A6cA/5hMDQwRv0rc4eIGBSnAAH9iB6Y2F7K/AIoFGBdqn3ObTw==
+fetch-to-markdown@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/fetch-to-markdown/-/fetch-to-markdown-1.2.1.tgz#15a29439190aa8134533ec8d0317d131d562936b"
+  integrity sha512-q5zrQS8TqC4W8M45xNSEUkZrqXHWtGlks3wzLVQoLHepf8J4rpZ6MdT+PkfvOiwAVfHKFRO3VXKEG+aPmQQtVg==
   dependencies:
     json2yaml "^1.1.0"
     lodash "^4.17.20"
