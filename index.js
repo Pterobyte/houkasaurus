@@ -22,7 +22,6 @@ const fetchAllContent = () =>
       readme: `---\nsidebar: false\n---\n${components.Cards}`,
     }),
     fetchToMarkdown(contentAPI, 'companies'),
-    fetchToMarkdown(contentAPI, 'links'),
     fetchToMarkdown(contentAPI, 'about'),
     fetchToMarkdown(contentAPI, 'landing', {
       components: landingComponents,
