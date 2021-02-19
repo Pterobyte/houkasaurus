@@ -37,16 +37,18 @@ body {
       color: var(--text-color);
     }
     .post-tag {
-      background-color: var(--background-color);
+      background-color: var(--foreground-color);
+      border-radius: 3px;
       &:hover {
         background-color: var(--accent-color);
         &::after {
           border-left: 10px solid var(--accent-color);
         }
       }
-      &::after {
-        border-left: 10px solid var(--background-color);
-        background: var(--foreground-color);
+      a {
+        &::after {
+          background: var(--foreground-color);
+        }
       }
     }
     .pagination {
