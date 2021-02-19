@@ -48,7 +48,7 @@ module.exports = {
   theme: '@vuepress/theme-blog',
   themeConfig: {
     repo: 'HoukasaurusRex',
-    author: 'JT Houk',
+    author: '@HoukasaurusRex',
     domain: 'jt.houk.space',
     hostname: 'https://jt.houk.space',
     smoothScroll: true,
