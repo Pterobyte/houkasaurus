@@ -29,6 +29,9 @@
     "prettier": "^2.2.1",
     "stylelint": "^13.10.0"
   },
+  "engines": {
+    "node": "^14"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HoukasaurusRex/jt.houk.space.git"
