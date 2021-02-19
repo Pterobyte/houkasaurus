@@ -21,17 +21,13 @@ module.exports = {
       twitterCard: _ => 'summary_large_image',
       type: $page => ['articles', 'posts', 'blog'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
       url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
-      image: ($page, _) => $page.frontmatter.image && $page.frontmatter.image[0]?.url,
-      // image: ($page, $site) => $page.frontmatter.image && 'https://jt.houk.space/aqipi.jpg',
+      image: ($page, _) => $page.frontmatter.image,
       publishedAt: $page => $page.frontmatter.created_at && new Date($page.frontmatter.created_at),
       modifiedAt: $page => $page.updated_at && new Date($page.updated_at),
       customMeta: (add, { $site, $page }) => {
-        add('twitter:image:src', $page.frontmatter.image && $page.frontmatter.image[0]?.url)
+        add('twitter:image:src', $page.frontmatter.image)
         add('twitter:creator', $site.themeConfig.author)
       },
-    },
-    feed: {
-      is_feed_page: ({ path = '' }) => !!path.match(/\/articles\/.*\.html$/g)
     },
     'vuepress-plugin-mailchimp': {
       endpoint: process.env.MC_API,
@@ -120,7 +116,8 @@ module.exports = {
       }
     ],
     feed: {
-      canonical_base:'https://jt.houk.space'
-    }
+      is_feed_page: ({ path = '' }) => !!path.match(/\/articles\/.*\.html$/g),
+      canonical_base: 'https://jt.houk.space'
+    },
   }
 }
