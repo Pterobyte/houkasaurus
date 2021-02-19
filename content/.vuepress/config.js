@@ -21,11 +21,12 @@ module.exports = {
       twitterCard: _ => 'summary_large_image',
       type: $page => ['articles', 'posts', 'blog'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
       url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
-      image: ($page, $site) => $page.frontmatter.image && $page.frontmatter.image[0]?.url,
+      // image: ($page, $site) => $page.frontmatter.image && $page.frontmatter.image[0]?.url,
+      image: ($page, $site) => $page.frontmatter.image && 'https://jt.houk.space/aqipi.jpg',
       publishedAt: $page => $page.frontmatter.created_at && new Date($page.frontmatter.created_at),
       modifiedAt: $page => $page.updated_at && new Date($page.updated_at),
       customMeta: (add, { $site, $page }) => {
-        add('twitter:image:src', $page.frontmatter.image && $page.frontmatter.image[0]?.url)
+        // add('twitter:image:src', $page.frontmatter.image && $page.frontmatter.image[0]?.url)
         add('twitter:creator', $site.themeConfig.author)
       },
     },
