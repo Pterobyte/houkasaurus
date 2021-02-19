@@ -23,7 +23,11 @@ module.exports = {
       url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
       image: ($page, $site) => $page.frontmatter.image && $page.frontmatter.image[0]?.url,
       publishedAt: $page => $page.frontmatter.created_at && new Date($page.frontmatter.created_at),
-      modifiedAt: $page => $page.updated_at && new Date($page.updated_at)
+      modifiedAt: $page => $page.updated_at && new Date($page.updated_at),
+      customMeta: (add, { $site, $page }) => {
+        add('twitter:image:src', $page.frontmatter.image && $page.frontmatter.image[0]?.url)
+        add('twitter:creator', $site.themeConfig.author)
+      },
     },
     'vuepress-plugin-mailchimp': {
       endpoint: process.env.MC_API,
