@@ -31,7 +31,7 @@ export default {
 <style lang="scss" scoped>
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   grid-auto-rows: auto;
   grid-gap: 2rem;
 }

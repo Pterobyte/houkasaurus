@@ -9,7 +9,7 @@ const components = {
   Comments: '<Comments />',
   Newsletter: '<Newsletter />',
   Cards: '<Cards />',
-  Landing: '<Landing><Newsletter /></Landing>',
+  Landing: '<Landing />',
 }
 
 const articleComponents = [components.Newsletter, components.Comments]
@@ -23,7 +23,7 @@ const fetchAllContent = () =>
     }),
     fetchToMarkdown(contentAPI, 'projects', {
       readme: `---\nsidebar: false\n---\n${components.Cards}`,
-      contentDir: `${contentDir}/projects`,
+      contentDir: `${contentDir}/portfolio`,
     }),
     fetchToMarkdown(contentAPI, 'companies', {
       contentDir: `${contentDir}/companies`,

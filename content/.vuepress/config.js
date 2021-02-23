@@ -2,8 +2,8 @@ require('dotenv-defaults').config()
 const getConfig = require('vuepress-bar')
 
 const articles = getConfig(`${__dirname}/../articles`)
-const projects = getConfig(`${__dirname}/../projects`)
-projects.sidebar[0] = ['/projects/', '<- Back to Projects']
+const portfolio = getConfig(`${__dirname}/../portfolio`)
+portfolio.sidebar[0] = ['/portfolio/', '<- Back to Portfolio']
 
 module.exports = {
   title: 'JT\'s Space',
@@ -11,8 +11,8 @@ module.exports = {
   serviceWorker: true,
   ga: process.env.GA_ID,
   evergreen: true,
-  plugins: {
-    seo: {
+  plugins: [
+    ['seo', {
       siteTitle: (_, $site) => $site.title,
       title: $page => $page.title,
       description: $page => $page.frontmatter.description,
@@ -28,8 +28,8 @@ module.exports = {
         add('twitter:image:src', $page.frontmatter.image)
         add('twitter:creator', $site.themeConfig.author)
       },
-    },
-    'vuepress-plugin-mailchimp': {
+    }],
+    ['vuepress-plugin-mailchimp', {
       endpoint: process.env.MC_API,
       title: 'Subscribe',
       content: 'Get my latest posts. No spam.',
@@ -38,8 +38,8 @@ module.exports = {
         enabled: popupEnabled = true,
         timeout: popupTimeout = 4000
       }
-    }
-  },
+    }]
+  ],
   head: [
     [
       'link',
@@ -66,8 +66,8 @@ module.exports = {
         link: '/articles/'
       },
       {
-        text: 'Projects',
-        link: '/projects/'
+        text: 'Portfolio',
+        link: '/portfolio/'
       },
       {
         text: 'About',
@@ -80,7 +80,7 @@ module.exports = {
     ],
     sidebar: {
       '/articles/': articles.sidebar,
-      '/projects/': projects.sidebar
+      '/portfolio/': portfolio.sidebar
     },
     footer: {
       contact: [
@@ -101,6 +101,9 @@ module.exports = {
           link: 'mailto:jt@houk.space?subject=Hello%20From%20Your%20Site&body='
         }
       ],
+      copyright: [{
+        text: `JT Houk © ${new Date().getFullYear()}`
+      }]
     },
     directories: [
       {
