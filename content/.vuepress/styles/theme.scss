@@ -82,5 +82,9 @@ body {
 @media (min-width: 957px) {
   #vuepress-theme-blog__global-layout {
     background-color: var(--background-color);
+
+    .vuepress-blog-theme-content {
+      padding: 1.5rem;
+    }
   }
 }

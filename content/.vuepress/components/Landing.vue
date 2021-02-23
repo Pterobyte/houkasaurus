@@ -4,7 +4,7 @@
       <img :src="profileImg" height="100%"/>
     </div>
     <main class="landing">
-      <h1>{{title}}</h1>
+      <h1 class="typewriter">{{title}}</h1>
       <h2 class="description">Software Engineer • Cloud Architect • DevOps</h2>
     </main>
     <aside>
