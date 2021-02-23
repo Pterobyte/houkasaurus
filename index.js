@@ -23,7 +23,7 @@ const fetchAllContent = () =>
     }),
     fetchToMarkdown(contentAPI, 'projects', {
       readme: `---\nsidebar: false\n---\n${components.Cards}`,
-      contentDir: `${contentDir}/portfolio`,
+      contentDir: `${contentDir}/projects`,
     }),
     fetchToMarkdown(contentAPI, 'companies', {
       contentDir: `${contentDir}/companies`,

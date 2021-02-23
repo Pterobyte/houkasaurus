@@ -2,8 +2,8 @@ require('dotenv-defaults').config()
 const getConfig = require('vuepress-bar')
 
 const articles = getConfig(`${__dirname}/../articles`)
-const portfolio = getConfig(`${__dirname}/../portfolio`)
-portfolio.sidebar[0] = ['/portfolio/', '<- Back to Portfolio']
+const portfolio = getConfig(`${__dirname}/../projects`)
+portfolio.sidebar[0] = ['/projects/', '<- Back to Portfolio']
 
 module.exports = {
   title: 'JT\'s Space',
@@ -67,7 +67,7 @@ module.exports = {
       },
       {
         text: 'Portfolio',
-        link: '/portfolio/'
+        link: '/projects/'
       },
       {
         text: 'About',
@@ -80,7 +80,7 @@ module.exports = {
     ],
     sidebar: {
       '/articles/': articles.sidebar,
-      '/portfolio/': portfolio.sidebar
+      '/projects/': portfolio.sidebar
     },
     footer: {
       contact: [
