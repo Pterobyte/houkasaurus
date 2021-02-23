@@ -1,7 +1,8 @@
 <template>
   <div>
     <div class="profile-img">
-      <img :src="profileImg" height="100%"/>
+      <img src="/jt-face-right.webp" height="100%"/>
+      <img class="laser" src="/laser.svg" alt="">
     </div>
     <main class="landing">
       <h1 class="typewriter">{{title}}</h1>
@@ -15,7 +16,6 @@
 
 <script>
 import RightArrow from './RightArrow'
-import jtFaceRightImg from '../public/jt-face-right.png'
 
 export default {
   name: 'Landing',
@@ -23,9 +23,6 @@ export default {
   computed: {
     title() {
       return this.$page.frontmatter.heroText || this.$page.frontmatter.title
-    },
-    profileImg() {
-      return jtFaceRightImg
     }
   }
 }
@@ -43,6 +40,14 @@ export default {
   left: -100px;
   bottom: 0;
   margin-bottom: 60px;
+  opacity: 0.8;
+  display: flex;
+}
+
+.laser {
+  overflow: hidden;
+  margin-left: -80px;
+  margin-top: -100px;
   opacity: 0.8;
 }
 

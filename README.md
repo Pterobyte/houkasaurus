@@ -107,9 +107,11 @@ See the [open issues][issues-url] for a list of proposed features (and known iss
 * [ ] Page transitions
 * [ ] Update README to template
 * [ ] Webmentions twitter hooks
-* [ ] RSS feed
+* [x] RSS feed
 * [ ] Interactive skill tree
-* [ ] Automate readme publish
+* [ ] Automate readme about publish
+* [ ] Laser eyes on click
+* [ ] Blur image until loaded
 
 <!-- DEPENDENCIES -->
 ## 📦 Dependencies
