@@ -36,6 +36,7 @@ export default {
 
 .profile-img {
   height: 50vh;
+  width: calc(100vw + 100px);
   position: absolute;
   left: -100px;
   bottom: 0;
@@ -45,6 +46,7 @@ export default {
 }
 
 .laser {
+  width: 100vw;
   overflow: hidden;
   margin-left: -80px;
   margin-top: -100px;
