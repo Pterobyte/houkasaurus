@@ -5,16 +5,6 @@
   animation: animateGradient 10s ease infinite;
 }
 
-@-webkit-keyframes animateGradient {
-  0%{background-position: 0% 0%}
-  50%{background-position: 100% 100%}
-  100%{background-position: 0% 0%}
-}
-@-moz-keyframes animateGradient {
-  0%{background-position: 0% 0%}
-  50%{background-position: 100% 100%}
-  100%{background-position: 0% 0%}
-}
 @keyframes animateGradient {
   0%{background-position: 0% 0%}
   50%{background-position: 100% 100%}

@@ -2,7 +2,7 @@
   <div>
     <div class="profile-img">
       <img src="/jt-face-right.webp" height="100%" alt=""/>
-      <img class="laser" src="/laser.svg" alt="">
+      <Laser class="laser"/>
     </div>
     <main class="landing">
       <h1 class="typewriter">{{title}}</h1>
@@ -16,10 +16,11 @@
 
 <script>
 import RightArrow from './RightArrow'
+import Laser from './Laser'
 
 export default {
   name: 'Landing',
-  components: { RightArrow },
+  components: { RightArrow, Laser },
   computed: {
     title() {
       return this.$page.frontmatter.heroText || this.$page.frontmatter.title || this.$site.title
@@ -53,7 +54,8 @@ export default {
   overflow: hidden;
   margin-left: -80px;
   margin-top: -100px;
-  opacity: 0.8;
+  display: flex;
+  align-items: center;
 }
 
 .arrow {
