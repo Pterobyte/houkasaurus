@@ -32,7 +32,7 @@ export default {
       return typeof window !== 'undefined' && window.innerWidth <= 425
     },
     spotifyCardTheme() {
-      return this.isMobileWidth ? 'natemoo-re' : 'compact'
+      return this.isMobileWidth ? 'natemoo-re' : 'default'
     },
     spotifyCard() {
       return `https://spotify-github-profile.vercel.app/api/view?uid=spacemanjohn&cover_image=true&theme=${this.spotifyCardTheme}`
