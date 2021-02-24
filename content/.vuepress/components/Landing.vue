@@ -3,6 +3,7 @@
     <div class="profile-img">
       <img src="/jt-face-right.webp" height="100%" alt=""/>
       <Laser class="laser"/>
+      <!-- <a v-if="!isMobileWidth" class="twitter-timeline" href="https://twitter.com/HoukasaurusRex" data-tweet-limit="1"></a> -->
     </div>
     <main class="landing">
       <h1 class="typewriter">{{title}}</h1>
@@ -27,8 +28,11 @@ export default {
     description() {
       return this.$site.description
     },
+    isMobileWidth() {
+      return typeof window !== 'undefined' && window.innerWidth <= 425
+    },
     spotifyCardTheme() {
-      return window && window.innerWidth <= 425 ? 'natemoo-re' : 'compact'
+      return this.isMobileWidth ? 'natemoo-re' : 'compact'
     },
     spotifyCard() {
       return `https://spotify-github-profile.vercel.app/api/view?uid=spacemanjohn&cover_image=true&theme=${this.spotifyCardTheme}`
@@ -88,5 +92,9 @@ export default {
 
 .spotify-card {
   max-height: 320px;
+}
+
+.twitter-timeline {
+  max-width: 300px;
 }
 </style>

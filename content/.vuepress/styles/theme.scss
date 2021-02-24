@@ -81,6 +81,10 @@ body {
   }
 }
 
+.timeline-Widget {
+  max-width: 300px;
+}
+
 @media (min-width: 720px) {
   #vuepress-theme-blog__global-layout {
     .content-wrapper {

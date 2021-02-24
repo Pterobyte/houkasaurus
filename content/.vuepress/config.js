@@ -59,6 +59,7 @@ module.exports = {
     ['meta', { name: 'msapplication-navbutton-color', content: 'rgb(235, 141, 175)' }],
     ['meta', { name: 'msapplication-starturl', content: '/' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' }],
+    // ['script', { async: true, src: 'https://platform.twitter.com/widgets.js', charset: 'utf-8' }]
   ],
   theme: '@vuepress/theme-blog',
   themeConfig: {
