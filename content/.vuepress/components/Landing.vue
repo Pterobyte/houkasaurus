@@ -7,10 +7,9 @@
     <main class="landing">
       <h1 class="typewriter">{{title}}</h1>
       <h2 class="description">{{description}}</h2>
+      <a href="https://spotify-github-profile.vercel.app/api/view?uid=spacemanjohn&redirect=true" target="_blank" rel="noopener"><img class="spotify-card" :src="spotifyCard" :height="spotifyCardHeight" alt=""></a>
     </main>
-    <aside>
-      <RightArrow class="arrow"/>
-    </aside>
+    <RightArrow class="arrow"/>
   </div>
 </template>
 
@@ -27,6 +26,15 @@ export default {
     },
     description() {
       return this.$site.description
+    },
+    spotifyCardTheme() {
+      return window && window.innerWidth <= 425 ? 'natemoo-re' : 'compact'
+    },
+    spotifyCard() {
+      return `https://spotify-github-profile.vercel.app/api/view?uid=spacemanjohn&cover_image=true&theme=${this.spotifyCardTheme}`
+    },
+    spotifyCardHeight() {
+      return this.spotifyCardTheme === 'natemoo-re' ? 80 : 300
     }
   }
 }
@@ -47,6 +55,12 @@ export default {
   margin-bottom: 72px;
   opacity: 0.8;
   display: flex;
+  img {
+    filter: drop-shadow(2px 5px 5px #222); 
+  }
+  svg {
+    filter: drop-shadow(2px 5px 5px #222); 
+  }
 }
 
 .laser {
@@ -62,9 +76,17 @@ export default {
   position: absolute;
   top: 40%;
   right: 20vw;
+  background-color: var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #222;
 }
 
 .description {
   font-size: 1rem;
+}
+
+.spotify-card {
+  max-height: 320px;
 }
 </style>

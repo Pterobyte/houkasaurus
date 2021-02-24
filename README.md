@@ -113,6 +113,7 @@ See the [open issues][issues-url] for a list of proposed features (and known iss
 * [ ] Animate Laser eyes on click
 * [ ] Blur image until loaded
 * [ ] Offline support
+* [ ] Spotify API last played song
 
 <!-- DEPENDENCIES -->
 ## 📦 Dependencies

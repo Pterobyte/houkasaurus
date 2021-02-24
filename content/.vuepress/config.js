@@ -38,16 +38,27 @@ module.exports = {
         enabled: popupEnabled = true,
         timeout: popupTimeout = 4000
       }
+    }],
+    ['@vuepress/pwa', {
+      serviceWorker: true,
+      updatePopup: true
     }]
   ],
   head: [
-    [
-      'link',
-      {
-        rel: 'icon',
-        href: '/favicon.ico'
-      }
-    ]
+    ['link', { rel: 'icon', href: '/jt-face-logo.png' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['link', { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon-152x152.png' }],
+    ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: 'rgb(235, 141, 175)' }],
+    ['meta', { name: 'theme-color', content: 'rgb(235, 141, 175)' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }],
+    ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
+    ['meta', { name: 'application-name', content: 'JT' }],
+    ['meta', { name: 'apple-mobile-web-app-title', content: 'JT' }],
+    ['meta', { name: 'msapplication-navbutton-color', content: 'rgb(235, 141, 175)' }],
+    ['meta', { name: 'msapplication-starturl', content: '/' }],
+    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' }],
   ],
   theme: '@vuepress/theme-blog',
   themeConfig: {

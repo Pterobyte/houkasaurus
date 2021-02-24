@@ -30,8 +30,7 @@ export default {
     height: fit-content;
     width: 100%;
     transition: all 0.3s ease;
-    filter: opacity(0.8);
-    filter: saturate(1);
+    filter: opacity(0.8) saturate(1) drop-shadow(1px 1px 1px #222);
     .svg-laser__top {
       fill: $red;
     }
@@ -43,7 +42,7 @@ export default {
     }
     &:hover,
     &:active {
-      filter: saturate(3);
+      filter: saturate(3) drop-shadow(1px 1px 1px #222);
       .svg-laser__top {
         animation: animateTop 3s linear infinite;
       }
