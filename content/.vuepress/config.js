@@ -15,7 +15,7 @@ module.exports = {
     ['seo', {
       siteTitle: (_, $site) => $site.title,
       title: $page => $page.title,
-      description: $page => $page.frontmatter.description || $site.description,
+      description: ($page, $site) => $page.frontmatter.description || $site.description,
       author: (_, $site) => $site.themeConfig.author,
       tags: $page => $page.frontmatter.tags,
       twitterCard: _ => 'summary_large_image',
