@@ -1,12 +1,12 @@
 <template>
   <div>
     <div class="profile-img">
-      <img src="/jt-face-right.webp" height="100%"/>
+      <img src="/jt-face-right.webp" height="100%" alt=""/>
       <img class="laser" src="/laser.svg" alt="">
     </div>
     <main class="landing">
       <h1 class="typewriter">{{title}}</h1>
-      <h2 class="description">Software Engineer • Cloud Architect • DevOps</h2>
+      <h2 class="description">{{description}}</h2>
     </main>
     <aside>
       <RightArrow class="arrow"/>
@@ -22,7 +22,10 @@ export default {
   components: { RightArrow },
   computed: {
     title() {
-      return this.$page.frontmatter.heroText || this.$page.frontmatter.title
+      return this.$page.frontmatter.heroText || this.$page.frontmatter.title || this.$site.title
+    },
+    description() {
+      return this.$site.description
     }
   }
 }
@@ -40,7 +43,7 @@ export default {
   position: absolute;
   left: -100px;
   bottom: 0;
-  margin-bottom: 60px;
+  margin-bottom: 72px;
   opacity: 0.8;
   display: flex;
 }

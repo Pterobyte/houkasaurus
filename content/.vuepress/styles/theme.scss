@@ -30,6 +30,7 @@ body {
     }
   }
   .content-wrapper {
+    min-height: calc(100vh - 72px - 100px - 20px);
     .ui-post-summary {
       color: var(--text-color);
     }
@@ -70,12 +71,20 @@ body {
     
   }
   .footer {
-    min-height: 0;
+    height: 72px;
     padding: 14px 32px;
   }
   a {
     text-decoration: none;
     color: var(--text-color);
+  }
+}
+
+@media (min-width: 720px) {
+  #vuepress-theme-blog__global-layout {
+    .content-wrapper {
+      min-height: calc(100vh - 72px - 160px - 80px);
+    }
   }
 }
 
@@ -85,6 +94,15 @@ body {
 
     .vuepress-blog-theme-content {
       padding: 1.5rem;
+    }
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */
+  #vuepress-theme-blog__global-layout {
+    .content-wrapper {
+      min-height: calc(100vh - 72px - 100px - 20px - 114px); /* I think the 114px comes from ios bottom nav? */
     }
   }
 }

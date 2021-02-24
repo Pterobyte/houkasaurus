@@ -48,6 +48,7 @@ export default {
 }
 .move {
   position: absolute;
+  top: 0;
   padding-left: 5px;
 }
 </style>

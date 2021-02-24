@@ -7,7 +7,7 @@ portfolio.sidebar[0] = ['/projects/', '<- Back to Portfolio']
 
 module.exports = {
   title: 'JT\'s Space',
-  description: 'Entrepreneur, Writer, and Fullstack Node.js Developer',
+  description: 'Software Engineer • Cloud Architect • DevOps',
   serviceWorker: true,
   ga: process.env.GA_ID,
   evergreen: true,
@@ -15,7 +15,7 @@ module.exports = {
     ['seo', {
       siteTitle: (_, $site) => $site.title,
       title: $page => $page.title,
-      description: $page => $page.frontmatter.description,
+      description: $page => $page.frontmatter.description || $site.description,
       author: (_, $site) => $site.themeConfig.author,
       tags: $page => $page.frontmatter.tags,
       twitterCard: _ => 'summary_large_image',
@@ -72,6 +72,14 @@ module.exports = {
       {
         text: 'About',
         link: '/about/'
+      },
+      {
+        text: 'Labs',
+        link: 'https://labs.houk.space'
+      },
+      {
+        text: 'RaW',
+        link: 'https://rulesaswrittenshow.com'
       },
       {
         text: 'Get In Touch',
