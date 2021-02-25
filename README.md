@@ -29,7 +29,6 @@ It's my space... But just for me.
 
 * [Vuepress](https://vuepress.vuejs.org)
 
-<!-- GETTING STARTED -->
 ## ☕️ Getting Started
 
 To get it running locally, install dependencies with yarn and run the commands
@@ -57,17 +56,7 @@ yarn dev
 
 ## 🗺 Roadmap
 
-* [ ] Social media tracker
-* [ ] Page transitions
-* [ ] Update README to template
-* [ ] Webmentions twitter hooks
-* [x] RSS feed
-* [ ] Interactive skill tree
-* [x] Automate readme about publish
-* [ ] Animate Laser eyes on click
-* [ ] Blur image until loaded
-* [ ] Offline support
-* [ ] Spotify API last played song
+Check out the roadmap on my [projects](https://github.com/users/HoukasaurusRex/projects/1) page.
 
 ## 📦 Dependencies
 
