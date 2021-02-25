@@ -1,11 +1,5 @@
-# [![Blog][logo]][url] jt.houk.space Vuepress Site
+# [![Blog][logo]][url] JT's Space Vuepress Site
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
-*** See bottom of page for list of reference links
--->
 [![Netlify Status][netlify-shield]][netlify-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -21,28 +15,12 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Twitter: HoukasaurusRex][twitter-shield]][twitter-url]
 
-Front end to JT Houk's blog site.
+It's my space... But just for me.
 
 [Check it out »][product-url]
 
 [Report Bug][issues-url] • [Request Feature][issues-url]
 
-<!-- TABLE OF CONTENTS -->
-## Table of Contents
-
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
-
-<!-- ABOUT THE PROJECT -->
 ## About The Project
 
 [![Houkasaurus Screen Shot][product-screenshot]][product-url]
@@ -77,31 +55,7 @@ yarn fetch
 yarn dev
 ```
 
-## 🤓 Author
-
-### JT Houk
-
-* Twitter: [@HoukasaurusRex][twitter-url]
-* Github: [@HoukasaurusRex][github-url]
-
-## 🤝 Contributing
-
-Want to make a change? Any contributions you make are **greatly appreciated**.
-
-Check out the [issues page][issues-url]
-
-1. Clone the repo
-2. Create your Feature Branch (`gco -b release/my-project`)
-3. Commit your Changes (`git commit -m 'add: small addition'`)
-4. Push to the Branch (`git push origin release/my-project`)
-5. Open a Pull Request
-
-<!-- ROADMAP -->
 ## 🗺 Roadmap
-
-See the [open issues][issues-url] for a list of proposed features (and known issues)
-
-### TODO
 
 * [ ] Social media tracker
 * [ ] Page transitions
@@ -115,12 +69,10 @@ See the [open issues][issues-url] for a list of proposed features (and known iss
 * [ ] Offline support
 * [ ] Spotify API last played song
 
-<!-- DEPENDENCIES -->
 ## 📦 Dependencies
 
 [![FOSSA Status][fossa-scan]][fossa-url]
 
-<!-- ACKNOWLEDGEMENTS -->
 ## ✨ Acknowledgements
 
 * [Best README Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
@@ -144,9 +96,9 @@ See the [open issues][issues-url] for a list of proposed features (and known iss
 [issues-url]: https://github.com/HoukasaurusRex/jt.houk.space/issues
 [version-shield]: https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000
 [maintenance-shield]: https://img.shields.io/badge/Maintained%3F-yes-green.svg
-[maintenance-url]: https://github.com/HoukasaurusRex/houkasaurus/graphs/commit-activity
-[dependencies-shield]: https://david-dm.org/HoukasaurusRex/houkasaurus.svg
-[dependencies-url]: https://david-dm.org/HoukasaurusRex/houkasaurus
+[maintenance-url]: https://github.com/HoukasaurusRex/jt.houk.space/graphs/commit-activity
+[dependencies-shield]: https://david-dm.org/HoukasaurusRex/jt.houk.space.svg
+[dependencies-url]: https://david-dm.org/HoukasaurusRex/jt.houk.space
 [prettier-shield]: https://img.shields.io/badge/styled_with-prettier-ff69b4.svg
 [prettier-url]: https://github.com/prettier/prettier
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
