@@ -30,7 +30,10 @@ export default {
   data() {
     return {
       profileImgLoaded: false,
-      spotifyImgLoaded: false
+      spotifyImgLoaded: false,
+      profileLoadedLaserStyles: {
+        width: 0
+      }
     }
   },
   computed: {
@@ -74,6 +77,9 @@ export default {
   methods: {
     onLoadProfileImg() {
       this.profileImgLoaded = true
+      setTimeout(() => {
+        this.profileLoadedLaserStyles.width = 'calc(100vw + 430px)'
+      }, 500)
     },
     onLoadSpotifyImg() {
       this.spotifyImgLoaded = true
@@ -106,10 +112,10 @@ export default {
 }
 
 .laser {
-  width: calc(100vw + 430px);
   overflow: hidden;
   margin-left: -80px;
   margin-top: -100px;
+  transition: all 0.3s ease-in;
 }
 
 .arrow {

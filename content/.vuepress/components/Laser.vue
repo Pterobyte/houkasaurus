@@ -26,7 +26,7 @@ export default {
     height: fit-content;
     width: 100%;
     filter: opacity(0.8) saturate(1) drop-shadow(1px 1px 1px #222);
-    transition: all 0.03s linear;
+    transition: transform 0.03s linear;
     .svg-laser__top {
       fill: $red;
     }
