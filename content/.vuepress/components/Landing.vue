@@ -32,7 +32,7 @@ export default {
       profileImgLoaded: false,
       spotifyImgLoaded: false,
       profileLoadedLaserStyles: {
-        width: 0
+        transform: 'scaleX(0) scaleY(1.1)'
       }
     }
   },
@@ -78,7 +78,7 @@ export default {
     onLoadProfileImg() {
       this.profileImgLoaded = true
       setTimeout(() => {
-        this.profileLoadedLaserStyles.width = 'calc(100vw + 430px)'
+        this.profileLoadedLaserStyles.transform = 'scaleX(1) scaleY(1)'
       }, 500)
     },
     onLoadSpotifyImg() {
@@ -112,10 +112,12 @@ export default {
 }
 
 .laser {
+  width: calc(100vw + 180px);
   overflow: hidden;
   margin-left: -80px;
   margin-top: -100px;
-  transition: all 0.3s ease-in;
+  transition: all 0.15s ease-in;
+  transform-origin: center left;
 }
 
 .arrow {
