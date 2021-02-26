@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     backgroundImageStyle() {
-      return `--image-url: url(${this.imageUrl});`
+      return `background-image: url(${this.imageUrl});`
     }
   },
 }
@@ -37,8 +37,6 @@ export default {
 }
 
 .card__content {
-  --image-url: '';
-  background-image: var(--image-url);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top, center;
@@ -48,12 +46,11 @@ export default {
   height: 12rem;
   max-width: 90vw;
   text-align: center;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.15);
 
   &:hover {
-    transform: translateY(-3px);
     transform: scale(1.01);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.15);
   }
   a {
     color: var(--text-color);
