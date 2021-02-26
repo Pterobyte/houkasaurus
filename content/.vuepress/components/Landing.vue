@@ -12,7 +12,7 @@
       <h2 class="description">{{description}}</h2>
       <a href="https://spotify-github-profile.vercel.app/api/view?uid=spacemanjohn&redirect=true" target="_blank" rel="noopener">
         <transition name="fade">
-          <img v-show="spotifyImgLoaded" @load="onLoadSpotifyImg" class="spotify-card" :src="spotifyCard" :height="spotifyCardHeight" alt="">
+          <img v-show="spotifyImgLoaded" @load="onLoadSpotifyImg" class="spotify-card" :src="spotifyCard" :height="spotifyCardHeight" alt="" :style="spotifyCardDynamicStyles">
         </transition>
       </a>
     </main>
@@ -51,6 +51,13 @@ export default {
     },
     spotifyCardHeight() {
       return this.spotifyCardTheme === 'natemoo-re' ? 80 : 300
+    },
+    spotifyCardDynamicStyles() {
+      return this.spotifyCardTheme === 'natemoo-re' ? {} : {
+        'box-shadow': '1px 1px 1px #222',
+        'border-radius': '6px',
+        'background-color': '#000',
+      }
     },
     profileLoadedStyles() {
       return this.profileImgLoaded ? {
@@ -96,9 +103,6 @@ export default {
   img {
     filter: drop-shadow(2px 5px 5px #222);
   }
-  svg {
-    filter: drop-shadow(2px 5px 5px #222); 
-  }
 }
 
 .laser {
@@ -115,7 +119,12 @@ export default {
   background-color: var(--primary-color);
   padding: 0.25rem 0.5rem;
   border-radius: 5px;
-  box-shadow: 2px 2px 2px #222;
+  box-shadow: 1px 1px 2px #222;
+  transition: all 0.15s ease;
+  &:hover {
+    box-shadow: 1.5px 1.5px 3px #222;
+    transform: scale(1.01);
+  }
 }
 
 .description {
