@@ -2,7 +2,7 @@
   <div>
     <div class="profile-img" :style="profileLoadedStyles">
       <transition name="fade">
-        <img ref="profileImg" v-show="profileImgLoaded" @load="onLoadProfileImg" src="/jt-face-right.webp" :style="profileLoadedImgStyles" height="100%" alt=""/>
+        <img ref="profileImg" v-show="profileImgLoaded" @load="onLoadProfileImg" src="/jt-face-right.webp" height="100%" width="0" alt=""/>
       </transition>
       <Laser class="laser" :style="profileLoadedLaserStyles" />
       <!-- <a v-if="!isMobileWidth" class="twitter-timeline" href="https://twitter.com/HoukasaurusRex" data-tweet-limit="1"></a> -->
@@ -10,11 +10,13 @@
     <main class="landing">
       <h1 class="typewriter">{{title}}</h1>
       <h2 class="description">{{description}}</h2>
-      <a href="https://spotify-github-profile.vercel.app/api/view?uid=spacemanjohn&redirect=true" target="_blank" rel="noopener">
-        <transition name="fade">
-          <img v-show="spotifyImgLoaded" @load="onLoadSpotifyImg" class="spotify-card" :src="spotifyCard" :height="spotifyCardHeight" alt="">
-        </transition>
-      </a>
+        <div class="spotify-card">
+          <a href="https://spotify-github-profile.vercel.app/api/view?uid=spacemanjohn&redirect=true" target="_blank" rel="noopener">
+              <transition name="fade">
+                <img v-show="spotifyImgLoaded" @load="onLoadSpotifyImg" :src="spotifyCard" height="100%" alt="">
+              </transition>
+          </a>
+        </div>
     </main>
     <RightArrow class="arrow"/>
   </div>
@@ -30,10 +32,7 @@ export default {
   data() {
     return {
       profileImgLoaded: false,
-      spotifyImgLoaded: false,
-      profileLoadedImgStyles: {
-        width: 0
-      }
+      spotifyImgLoaded: false
     }
   },
   computed: {
@@ -51,9 +50,6 @@ export default {
     },
     spotifyCard() {
       return `https://spotify-github-profile.vercel.app/api/view?uid=spacemanjohn&cover_image=true&theme=${this.spotifyCardTheme}`
-    },
-    spotifyCardHeight() {
-      return this.spotifyCardTheme === 'natemoo-re' ? 80 : 300
     },
     profileLoadedStyles() {
       return this.profileImgLoaded ? {
@@ -74,7 +70,7 @@ export default {
     onLoadProfileImg() {
       this.profileImgLoaded = true
       setTimeout(() => {
-        this.profileLoadedImgStyles = { width: `${this.$refs.profileImg.height * (610/725)}px` }
+        this.$refs.profileImg.width = `${this.$refs.profileImg.height * (610 / 725)}`
       }, 500)
     },
     onLoadSpotifyImg() {
@@ -137,10 +133,12 @@ export default {
 }
 
 .spotify-card {
-  max-height: 320px;
+  min-height: 80px;
+  min-width: 290px;
+  margin: 0 auto;
+  img {
+    max-height: 320px;
+  }
 }
 
-.twitter-timeline {
-  max-width: 300px;
-}
 </style>
