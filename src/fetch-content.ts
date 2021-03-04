@@ -1,10 +1,12 @@
-require('dotenv-defaults').config()
-const fs = require('fs').promises
-const fetch = require('node-fetch')
-const path = require('path')
-const { fetchToMarkdown } = require('fetch-to-markdown')
+import dotenv from 'dotenv-defaults'
+import { promises as fs } from 'fs'
+import fetch from 'node-fetch'
+import path from 'path'
+import { fetchToMarkdown } from 'fetch-to-markdown'
 
+dotenv.config()
 const contentAPI = process.env.CMS_API
+if (!contentAPI) throw new Error('CMS_API is not defined')
 const contentDir = path.join(`${__dirname}/content`)
 
 const components = {
@@ -17,10 +19,8 @@ const components = {
 const articleComponents = [components.Newsletter, components.Comments]
 const landingComponents = [components.Landing]
 
-const fetchGHReadme = async () => {
-  const res = await fetch(
-    'https://raw.githubusercontent.com/HoukasaurusRex/HoukasaurusRex/master/README.md'
-  )
+const fetchAbout = async (url = '') => {
+  const res = await fetch(url)
   const md = await res.text()
   await fs.rmdir(`${contentDir}/about`, { recursive: true })
   await fs.mkdir(`${contentDir}/about`)
@@ -37,21 +37,16 @@ const fetchAllContent = () =>
       readme: `---\nsidebar: false\n---\n${components.Cards}`,
       contentDir: `${contentDir}/projects`,
     }),
-    fetchToMarkdown(contentAPI, 'companies', {
-      contentDir: `${contentDir}/companies`,
-    }),
-    fetchToMarkdown(contentAPI, 'links', { contentDir: `${contentDir}/links` }),
     fetchToMarkdown(contentAPI, 'landing', {
       components: landingComponents,
       contentDir: `${contentDir}/`,
     }),
+    fetchAbout(
+      'https://raw.githubusercontent.com/HoukasaurusRex/HoukasaurusRex/master/README.md'
+    ),
   ])
 
-fetchGHReadme().catch((error) => {
-  console.error(error)
-  process.exit(1)
-})
 fetchAllContent().catch((error) => {
-  console.error(error)
+  console.error(error.stack)
   process.exit(1)
 })
