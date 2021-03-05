@@ -61,7 +61,8 @@ module.exports = {
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' }],
     // ['script', { async: true, src: 'https://platform.twitter.com/widgets.js', charset: 'utf-8' }]
   ],
-  theme: '@vuepress/theme-blog',
+  // extend: '@vuepress/theme-blog',
+  // theme: '@vuepress/theme-blog',
   themeConfig: {
     repo: 'HoukasaurusRex',
     author: '@HoukasaurusRex',
@@ -131,15 +132,20 @@ module.exports = {
         dirname: 'articles', // Matched directory name
         path: '/articles/', // Entry page for current classifier
         title: 'Articles', // Entry and pagination page titles for current classifier
-        itemLayout: 'Writing', // Layout for matched pages.
+        // itemLayout: 'Writing', // Layout for matched pages.
         itemPermalink: '/articles/:slug', // Permalink for matched pages.
         pagination: { // Pagination behavior
           lengthPerPage: 5,
         },
+        frontmatter: {
+          type: 'post',
+          feed: {
+            enable: true
+          }
+        }
       }
     ],
     feed: {
-      is_feed_page: ({ path = '' }) => !!path.match(/\/articles\/.*\.html$/g),
       canonical_base: 'https://jt.houk.space'
     },
   }

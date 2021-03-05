@@ -19,22 +19,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  $red: rgb(235, 141, 175);
-  $green: rgb(179,226,101);
-  $blue: rgb(136,207,248);
+  
+  
   .svg-laser {
     height: fit-content;
     width: 100%;
     filter: opacity(0.8) saturate(1) drop-shadow(1px 1px 1px #222);
     transition: transform 0.03s linear;
     .svg-laser__top {
-      fill: $red;
+      fill: var(--red);
     }
     .svg-laser__middle {
-      fill: $green;
+      fill: var(--green);
     }
     .svg-laser__bottom {
-      fill: $blue;
+      fill: var(--blue);
     }
     &:hover,
     &:active {
@@ -53,21 +52,21 @@ export default {
   }
 
   @keyframes animateTop {
-    0% { fill: $red; }
-    25% { fill: $green; }
-    75% { fill: $blue; }
-    100% { fill: $red; }
+    0% { fill: var(--red); }
+    25% { fill: var(--green); }
+    75% { fill: var(--blue); }
+    100% { fill: var(--red); }
   }
   @keyframes animateMiddle {
-    0% { fill: $green; }
-    25% { fill: $blue; }
-    75% { fill: $red; }
-    100% { fill: $green; }
+    0% { fill: var(--green); }
+    25% { fill: var(--blue); }
+    75% { fill: var(--red); }
+    100% { fill: var(--green); }
   }
   @keyframes animateBottom {
-    0% { fill: $blue; }
-    25% { fill: $red; }
-    75% { fill: $green; }
-    100% { fill: $blue; }
+    0% { fill: var(--blue); }
+    25% { fill: var(--red); }
+    75% { fill: var(--green); }
+    100% { fill: var(--blue); }
   }
 </style>

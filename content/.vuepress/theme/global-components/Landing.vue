@@ -23,8 +23,8 @@
 </template>
 
 <script>
-import RightArrow from './RightArrow'
-import Laser from './Laser'
+import RightArrow from '@theme/components/RightArrow'
+import Laser from '@theme/components/Laser'
 
 export default {
   name: 'Landing',
@@ -32,7 +32,7 @@ export default {
   data() {
     return {
       profileImgLoaded: false,
-      spotifyImgLoaded: false
+      spotifyImgLoaded: false,
     }
   },
   computed: {

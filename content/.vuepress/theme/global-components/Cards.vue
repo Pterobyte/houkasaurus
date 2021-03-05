@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Card from './Card.vue'
+import Card from '@theme/components/Card.vue'
 
 export default {
   name: 'Cards',
