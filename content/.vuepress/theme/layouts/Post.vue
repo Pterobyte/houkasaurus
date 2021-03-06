@@ -1,6 +1,6 @@
 <template>
   <CThemeProvider class="child-theme-post" >
-    <CReset />
+    <!-- <CReset /> -->
     <Notification />
     <Post />
   </CThemeProvider>

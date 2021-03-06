@@ -8,21 +8,21 @@
     right="0"
     status="info"
     py="0.3rem"
-    background="#111"
-    color="#eee"
+    background="var(--text-color)"
+    color="var(--background-color)"
     box-shadow="1px 1px 2px rgba(0,0,0,0.15)"
     transition="all 0.3s ease"
     justify-content="center"
     align-items="center"
   >
-    <CLink isExternal href="https://donate.unhcr.org/int/ethiopia-emergency/~my-donation#step-1" d="flex" align-items="center">
+    <CLink isExternal href="https://donate.unhcr.org/int/ethiopia-emergency/~my-donation#step-1" d="flex" align-items="center" color="var(--background-color)" :_hover="{ color: 'var(--background-color)' }">
       <CAlertIcon name="hand-holding-heart" />
       <CBox max-width="600px" mx="1rem" >
         <CAlertTitle :mr="2" v-if="notificationTitle">{{notificationTitle}}</CAlertTitle>
         <CAlertDescription class="description" display="none">{{notification}}</CAlertDescription>
       </CBox>
     </CLink>
-    <CCloseButton @click="closeNotification" position="absolute" right="30px" />
+    <CCloseButton @click="closeNotification" position="absolute" right="10px" />
   </CAlert>
 </template>
 
@@ -69,6 +69,7 @@ export default {
     box-shadow: 3px 3px 5px rgba(0,0,0,0.15);
   }
 }
+
 @media (min-width: 720px) {
   .alert {
     top: 80px;

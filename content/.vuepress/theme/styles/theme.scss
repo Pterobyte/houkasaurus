@@ -81,7 +81,9 @@ body {
   }
   a {
     text-decoration: none;
-    color: var(--text-color);
+  }
+  button {
+    color: unset;
   }
   .fade-enter-active {
     transition: opacity 0.3s ease-in-out;

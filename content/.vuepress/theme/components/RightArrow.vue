@@ -40,7 +40,9 @@ export default {
   text-align: right;
   align-self: center;
   font-size: 1.5em;
+  color: var(--text-color);
   &:hover {
+    color: var(--text-color);
     .move {
       animation: move 1s ease-in-out infinite;
     }

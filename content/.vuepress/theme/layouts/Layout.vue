@@ -1,6 +1,6 @@
 <template>
   <CThemeProvider class="child-theme-layout">
-    <CReset />
+    <!-- <CReset /> -->
     <Layout />
   </CThemeProvider>
 </template>
