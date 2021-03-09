@@ -5,28 +5,42 @@ const articles = getConfig(`${__dirname}/../articles`)
 const portfolio = getConfig(`${__dirname}/../projects`)
 portfolio.sidebar[0] = ['/projects/', '<- Back to Portfolio']
 
+const exists = (item) => item && item !==' ...' ? item : null
+
 module.exports = {
   title: 'JT\'s Space',
   description: 'Software Engineer • Cloud Architect • DevOps',
+  metaDescription: 'A space for JT Houk\'s thoughts, works, and ideas. I\'m a Software Engineer • Cloud Architect • DevOps guy living in the web. Shoot me an email or contact me on Twitter for collaborations, freelancing, or talking tech!',
+  image: 'https://jt.houk.space/assets/8bitme-right.jpg',
+  tags: [
+    'JT',
+    'Houk',
+    'Freelance',
+    'Developer',
+    'Cloud Architect',
+    'DevOps',
+    'Full Stack'
+  ],
   serviceWorker: true,
   ga: process.env.GA_ID,
   evergreen: true,
   plugins: [
     ['seo', {
       siteTitle: (_, $site) => $site.title,
-      title: $page => $page.title,
-      description: ($page, $site) => $page.frontmatter.description || $site.description,
+      title: ($page, $site) => exists($page.title) || $site.title,
+      description: ($page, $site) => exists($page.frontmatter.description) || $site.metaDescription || $site.description,
       author: (_, $site) => $site.themeConfig.author,
-      tags: $page => $page.frontmatter.tags,
-      twitterCard: _ => 'summary_large_image',
+      tags: ($page, $site) => exists($page.frontmatter.tags) || $site.tags,
+      twitterCard: $page => exists($page.frontmatter.image) ? 'summary_large_image' : 'summary',
       type: $page => ['articles', 'posts', 'blog'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
       url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
-      image: ($page, _) => $page.frontmatter.image,
+      image: ($page, $site) => exists($page.frontmatter.image) || $site.image,
       publishedAt: $page => $page.frontmatter.created_at && new Date($page.frontmatter.created_at),
       modifiedAt: $page => $page.updated_at && new Date($page.updated_at),
       customMeta: (add, { $site, $page }) => {
-        add('twitter:image:src', $page.frontmatter.image)
+        add('twitter:image:src', exists($page.frontmatter.image) || $site.image)
         add('twitter:creator', $site.themeConfig.author)
+        add('description', exists($page.frontmatter.description) || $site.metaDescription || $site.description)
       },
     }],
     ['vuepress-plugin-mailchimp', {
