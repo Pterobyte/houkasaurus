@@ -81,6 +81,7 @@ export default {
 @media (min-width: 1300px) {
   .alert {
     margin-right: 230px;
+    border-radius: 0 0 5px 0;
   }
 }
 </style>

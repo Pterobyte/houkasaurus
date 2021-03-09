@@ -96,7 +96,7 @@ export default {
       }
     }
     .newsletter__button {
-      background-color: var(--primary-color);
+      background-color: var(--accent-color);
     }
   }
 }

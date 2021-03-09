@@ -1,35 +1,23 @@
 :root {
-  --primary-color: hsl(327, 76%, 64%);
-  --accent-color: #d05dd2;
-  --background-color: #eee;
-  --foreground-color: #f9f9f9;
-  --red: rgb(235, 141, 175);
-  --green: rgb(179,226,101);
-  --blue: rgb(136,207,248);
-  --btn-color-primary: $btnColorPrimary;
-  --btn-color-secondary: $btnColorSecondary;
-  --border-color: $borderColor;
-  --text-color: #122;
-  --darken-text-color: #000;
-  --shadow-color: $shadowColor;
-  --shadow-mid-color: lighten($shadowColor, 10%);
-  --box-shadow-back: 0px 1px 1px $shadowColor;
-  --box-shadow-mid: 0px 1px 1.5px 1.5px lighten($shadowColor, 5%);
-  --button-text-color: #fff;
+  --accent-color: hsla(327, 76%, 64%, 1);
+  --background-color: hsla(0, 0%, 94%, 1);
+  --foreground-color: hsla(0, 0%, 97%, 1);
+  --red: hsl(327, 70%, 75%);
+  --green: hsl(83, 70%, 75%);
+  --blue: hsl(202, 70%, 75%);
+  --text-color: hsla(180, 33%, 10%, 1);
+  --text-color-75: hsla(180, 33%, 10%, 0.75);
 }
 
 // Dark theme colors
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #2a2a2b;
-    --foreground-color: #313238;
-    --btn-color-secondary: darken($btnColorSecondary, 70%);
-    --border-color: darken($borderColor, 50%);
-    --text-color: #eee;
-    --darken-text-color: #eaecef;
-    --shadow-color: darken($shadowColor, 20%);
-    --shadow-mid-color: darken($shadowColor, 10%);
-    --box-shadow-back: 0px 1px 1px darken($shadowColor, 80%);
-    --box-shadow-mid: 0px 1px 1.5px 1.5px darken($shadowColor, 75%);
+    --background-color: hsl(0, 0%, 10%);
+    --foreground-color: hsl(0, 0%, 13%);
+    --text-color: hsla(0, 0%, 90%, 1);
+    --text-color-75: hsla(0, 0%, 90%, 0.75);
+    --red: hsl(327, 70%, 75%);
+    --green: hsl(83, 70%, 75%);
+    --blue: hsl(202, 70%, 75%);
   }
 }

@@ -1,8 +1,23 @@
+html,
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  .post-tag {
+    a:hover {
+      background-color: var(--accent-color);
+      &::after {
+        border-left-color: var(--accent-color);
+      }
+    }
+  }
+  a {
+    color: var(--accent-color);
+  }
 }
 #vuepress-theme-blog__global-layout {
+  a {
+    text-decoration: none;
+  }
   background-color: var(--foreground-color);
   color: var(--text-color);
   #header,
@@ -10,6 +25,9 @@ body {
   .mobile-menu-wrapper {
     background-color: var(--background-color);
     color: var(--text-color);
+    a {
+      color: var(--text-color);
+    }
     .mobile-home-link {
       color: var(--text-color);
     }
@@ -17,13 +35,13 @@ body {
       a:hover,
       .router-link-active {
         border-bottom: 2px solid var(--accent-color);
+        color: var(--accent-color);
       }
     }
     .search-box {
       .suggestions {
         background-color: var(--background-color);
-        color: var(--text-color);
-        .suggestion .focused {
+        .suggestion:hover {
           background-color: var(--foreground-color);
         }
       }
@@ -36,11 +54,16 @@ body {
         border-radius: 5px;
       }
     }
+    .ui-post-title,
+    .ui-post-meta,
     .ui-post-summary {
       color: var(--text-color);
-    }
-    .ui-post-meta {
-      color: var(--text-color);
+      a {
+        color: var(--text-color);
+        &:hover {
+          color: var(--accent-color);
+        }
+      }
     }
     .post-tag {
       background-color: var(--foreground-color);
@@ -79,9 +102,6 @@ body {
     height: 72px;
     padding: 14px 32px;
   }
-  a {
-    text-decoration: none;
-  }
   button {
     color: unset;
   }
@@ -95,6 +115,16 @@ body {
   
   .fade-enter {
     opacity: 0;
+  }
+  .vuepress-toc {
+    a {
+      color: var(--text-color);
+    }
+    .active {
+      a {
+        color: var(--accent-color);
+      }
+    }
   }
 }
 

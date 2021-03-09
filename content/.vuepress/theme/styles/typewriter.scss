@@ -3,7 +3,7 @@
   top: 50%;  
   width: 7em;
   margin: 0 auto;
-  border-right: 2px solid rgba(255,255,255,.75);
+  border-right: 2px solid var(--text-color-75);
   font-size: 180%;
   text-align: center;
   white-space: nowrap;
@@ -12,7 +12,7 @@
   animation: typewriter 1s steps(14) 1s 1 normal both,
             blinkTextCursor 800ms steps(24) infinite normal;
 }
-@keyframes typewriter{
+@keyframes typewriter {
   from {
     width: 0;
   }
@@ -20,9 +20,9 @@
     width: 7em;
   }
 }
-@keyframes blinkTextCursor{
+@keyframes blinkTextCursor {
   from{
-    border-right-color: rgba(255,255,255,.75);
+    border-right-color: var(--text-color-75);
   }
   to {
     border-right-color: transparent;

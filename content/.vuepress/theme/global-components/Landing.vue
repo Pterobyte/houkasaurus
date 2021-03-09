@@ -116,7 +116,7 @@ export default {
   position: absolute;
   top: 40%;
   right: 20vw;
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
   padding: 0.25rem 0.5rem;
   border-radius: 5px;
   box-shadow: 1px 1px 2px #222;
